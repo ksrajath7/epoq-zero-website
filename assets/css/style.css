@@ -419,24 +419,50 @@ body{
 
   
 .blogs{
-    padding: 60px 0 20px 0;
+    padding: 60px 20px 10px 20px;
 }
 
 .blog h1{
     margin-bottom: 20px;
-    font-size: 19px;
+    font-size: 35px;
+    font-weight: 400;
     color: #031B4E;
 }
 
-.blog p{
-    color: #5B6987;
-    margin-bottom: 80px;
-    line-height: 24px;
+.blog-author{
+    margin: 30px 0 60px 0;
+}
+
+.blog-content{
+    color: #2f2f30;
+    margin-bottom: 20px;
+    line-height: 32px;
+    font-size: 20px;
     font-weight: 400;
 }
 
-  #content {
+  #contentUi {
     display: none;
+  }
+  #contentFire {
+    display: none;
+  }
+  #contentXam {
+    display: none;
+  }
+  #contentMar {
+    display: none;
+  }
+  #contentPsy {
+    display: none;
+  }
+  #contentDja {
+    display: none;
+  }
+
+  .read-more-text{
+      color: blue;
+      cursor: pointer;
   }
 
 @media (min-width:600px) {
@@ -457,7 +483,7 @@ body{
     .testimonials{padding: 100px 180px;}
     .mobileview{display: none;}
     .webview{display: block;}
-    .blog{padding: 50px 100px 0 100px;}
+    .blog{padding: 0 100px 50px 100px;}
 }
 
 @media (min-width:1300px) {
@@ -467,7 +493,7 @@ body{
     .products-grid{grid-template-columns: repeat(3, 1fr);}
     .contact-div{padding: 100px 180px;}
     .testimonial{padding: 0 100px;}
-    .blog{padding: 50px 180px 0 180px;}
+    .blog{padding: 0 180px 50px 180px;}
 }
 
 @media (min-width:1500px) {

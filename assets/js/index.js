@@ -81,20 +81,95 @@ function openNav() {
     document.getElementById("mySidepanel").style.width = "0";
   }
 
+  var flagUi = false
+  var flagFire = false
+  var flagXam = false
+  var flagMar = false
+  var flagPsy = false
+  var flagDja = false
 
-
-  function readMoreFunction() {
-    var dots = document.getElementById("dots");
-    var contentText = document.getElementById("content");
-    var btnText = document.getElementById("buttonReadMore");
+  function readMoreUiFunction() {
+      flagUi=!flagUi
+    var contentText = document.getElementById("contentUi");
+    var btnText = document.getElementById("buttonReadMoreUi");
   
-    if (dots.style.display === "none") {
-      dots.style.display = "inline";
-      btnText.innerHTML = "Click to Read More About the Blog";
+    if (!flagUi) {
+      btnText.innerHTML = "Read More";
       contentText.style.display = "none";
     } else {
-      dots.style.display = "none";
-      btnText.innerHTML = "Read Less";
+      btnText.innerHTML = "Show Less";
       contentText.style.display = "inline";
     }
   }
+
+  
+  function readMoreXamFunction() {
+    flagXam=!flagXam
+  var contentText = document.getElementById("contentXam");
+  var btnText = document.getElementById("buttonReadMoreXam");
+
+  if (!flagXam) {
+    btnText.innerHTML = "Read More";
+    contentText.style.display = "none";
+  } else {
+    btnText.innerHTML = "Show Less";
+    contentText.style.display = "inline";
+  }
+}
+
+
+function readMoreFireFunction() {
+    flagFire=!flagFire
+  var contentText = document.getElementById("contentFire");
+  var btnText = document.getElementById("buttonReadMoreFire");
+
+  if (!flagFire) {
+    btnText.innerHTML = "Read More";
+    contentText.style.display = "none";
+  } else {
+    btnText.innerHTML = "Show Less";
+    contentText.style.display = "inline";
+  }
+}
+
+function readMoreMarFunction() {
+    flagMar=!flagMar
+  var contentText = document.getElementById("contentMar");
+  var btnText = document.getElementById("buttonReadMoreMar");
+
+  if (!flagMar) {
+    btnText.innerHTML = "Read More";
+    contentText.style.display = "none";
+  } else {
+    btnText.innerHTML = "Show Less";
+    contentText.style.display = "inline";
+  }
+}
+
+function readMorePsyFunction() {
+    flagPsy=!flagPsy
+  var contentText = document.getElementById("contentPsy");
+  var btnText = document.getElementById("buttonReadMorePsy");
+
+  if (!flagPsy) {
+    btnText.innerHTML = "Read More";
+    contentText.style.display = "none";
+  } else {
+    btnText.innerHTML = "Show Less";
+    contentText.style.display = "inline";
+  }
+}
+
+function readMoreDjaFunction() {
+    flagDja=!flagDja
+  var contentText = document.getElementById("contentDja");
+  var btnText = document.getElementById("buttonReadMoreDja");
+
+  if (!flagDja) {
+    btnText.innerHTML = "Read More";
+    contentText.style.display = "none";
+  } else {
+    btnText.innerHTML = "Show Less";
+    contentText.style.display = "inline";
+  }
+}
