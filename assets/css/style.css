@@ -14,12 +14,10 @@ body{
 }
 
 .headerContainer{
-    /* z-index: 2;
-    position: sticky;
-    top:0;
-    width: 100%; */
+    z-index: 2;
+    
     background-color: white;
-    box-shadow: 0 0 40px 1px #00000011;
+    box-shadow: 0 0 30px 1px #00000011;
 }
 
 .bodyContainer{
@@ -241,12 +239,18 @@ body{
     margin: -30px -20px 0 -20px;
     height: 200px;
     margin-bottom: 20px; 
+    border-radius: 6px;
 }
 
 .projects-col-img{
     object-fit: cover;
     height: 100%;
+    border-radius: 6px;
     width: 100%;
+}
+
+.more-works-a{
+    text-decoration: none;
 }
 
 .more-works{
@@ -256,7 +260,6 @@ body{
     color: #5B6987;
     margin-top: 50px;
     padding: 15px 30px;
-    cursor: pointer;
 }
 
 .more-works:hover{
@@ -318,6 +321,10 @@ body{
 
 .rightarrow{
     right: 50px;
+}
+
+#counter{
+    margin-top: 20px;
 }
 
 
