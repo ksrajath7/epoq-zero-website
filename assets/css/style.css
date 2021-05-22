@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.headerContainer{
+    z-index: 2;
+    position: sticky;
+    top:0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 40px 1px #00000011;
+}
+
+.bodyContainer{
+    position: relative;
+    z-index: 1;
+}
+
+
+.header{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 22px;
+}
+
+.header-logo-div{
+    padding: 0 20px;
+}
+
+.header-logo{
+    height: 30px;
+}
+
+.navLinks{
+    display: none;
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+.navLink-div{
+    padding: 0px 20px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.navLink-div-selected{
+    padding: 22px 20px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-bottom: 2px solid #0063FF;
+}
+
+.navLink{
+    text-decoration: none;
+    color: #031B4F;
+    font-weight: 500;
+}
+
+
+.hero-div{
+    text-align: center;
+    padding: 60px 30px;
+    background-color: #0063FF;
+    color: white;
+}
+
+.hero-div h1{
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.hero-div h4{
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.hero-div p{
+
+}
+
+.vision-mission{
+    padding: 30px 30px 0 30px;
+    background-color: #fff;
+    color: #031B4E;
+}
+
+.vision-mission-tabs{
+    flex: auto;
+    font-weight: 500;
+    display: flex;
+}
+
+.spacing{
+    flex: 1;
+}
+
+.vision-mission-tab{
+    cursor: pointer;
+    padding: 15px 10px;
+    color: #637292;
+    border-bottom: 3px solid #e0e0e0;
+}
+
+.vision-mission-tab-selected{
+    border-bottom: 3px solid #0063FF;
+}
+
+.vision{
+    padding: 60px 0 20px 0;
+}
+
+.vision h1{
+    margin-bottom: 20px;
+    font-size: 19px;
+    color: #031B4E;
+}
+
+.vision p{
+    color: #5B6987;
+    margin-bottom: 80px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.products-div{
+    text-align: center;
+    padding: 60px 30px;
+    background-color: #fff;
+    color: #031B4E;
+}
+
+.products-div h1{
+    margin-bottom: 20px;
+}
+
+.products-div p{
+    font-size: 20px;
+    color: #5B6987;
+    margin-bottom: 80px;
+}
+
+.products-grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.products-col{
+    text-align: left;
+    border-radius: 6px;
+    border: 1px solid #efefef;
+    padding: 30px 20px 40px 20px;
+    background-color: white;
+    box-shadow: 0 0 1px 2px #cdcdcd22;
+    transition: .5s box-shadow;
+}
+
+.products-col-img{
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.products-col h1{
+    font-size: 19px;
+    margin-bottom: 20px;
+    color: #031B4E;
+}
+
+
+.products-col h4{
+    color: #5B6987;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.products-col:hover{
+    box-shadow: 0 0 30px 1px #cdcdcd99;
+    transition: .5s box-shadow;
+}
+
+.read-more{
+    display: inline-block;
+    border-radius: 100px;
+    border: 1px solid #dfdfdf;
+    color: #dfdfdf;
+    margin-top: 50px;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+.read-more:hover{
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.why-col{
+    text-align: center;
+}
+
+.why-col h1{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.projects-col-img-div{
+    margin: -30px -20px 0 -20px;
+    height: 200px;
+    margin-bottom: 20px; 
+}
+
+.projects-col-img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.more-works{
+    display: inline-block;
+    border-radius: 100px;
+    border: 1px solid #5B6987;
+    color: #5B6987;
+    margin-top: 50px;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+.more-works:hover{
+    border: 1px solid #031B4E;
+    color: #031B4E;
+}
+
+.testimonials{
+    position: relative;
+    text-align: center;
+    padding: 60px 30px;
+    background-color: #F3F5F9;
+    color: #031B4E;
+}
+
+.testimonials h1{
+    margin-bottom: 20px;
+}
+
+.testimonials p{
+    font-size: 20px;
+    color: #031B4F;
+    line-height: 35px;
+    padding: 80px 0px;
+}
+
+
+.testimonial{
+    margin: 0;
+    text-align: center;
+}
+
+.testimonial h4{
+    font-size: 16px;
+    font-weight: 400;
+    color: #5B6987;
+}
+
+.testimonial h5{
+    font-size: 13px;
+    font-weight: 400;
+    color: #5B6987;
+}
+
+.leftarrow,
+.rightarrow{
+    padding: 0;
+    cursor: pointer;
+    top:48%;
+    position: absolute;
+    color: #5B6987;
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.leftarrow{
+    left: 50px;
+}
+
+.rightarrow{
+    right: 50px;
+}
+
+
+.contact-div{
+    padding: 60px 30px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    background-color: #010E28;
+    color: #fff;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.contact-div h1{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-div p{
+    font-size: 16px;
+    color: rgb(231, 231, 231);
+    line-height: 24px;
+}
+
+.social-icon{
+    text-decoration: none;
+    color: white;
+    padding-right: 10px;
+}
+
+.social-icon:hover{
+    color: rosybrown;
+}
+
+.mobileview{display: block;}
+.webview{display: none;}
+
+
+@media (min-width:600px) {
+    .products-grid{grid-template-columns: repeat(2, 1fr);}
+}
+
+
+@media (min-width:800px) {
+    .hero-div{padding: 80px 100px;}
+    .projects-grid{grid-template-columns: repeat(2, 1fr);}
+    .contact-div{grid-template-columns: repeat(2, 1fr);}
+}
+
+@media (min-width:1000px) {
+    .navLinks{display: flex;}
+    .vision-mission{padding: 50px 100px 0 100px;}
+    .products-grid{grid-template-columns: repeat(3, 1fr);}
+    .testimonials{padding: 100px 180px;}
+    .mobileview{display: none;}
+    .webview{display: block;}
+}
+
+@media (min-width:1300px) {
+    .hero-div{padding: 120px 400px;}
+    .vision-mission{padding: 50px 180px 0 180px;}
+    .products-div{padding: 100px 180px;}
+    .products-grid{grid-template-columns: repeat(3, 1fr);}
+    .contact-div{padding: 100px 180px;}
+    .testimonial{padding: 0 100px;}
+}
+
+@media (min-width:1500px) {
+    .products-grid{grid-template-columns: repeat(4, 1fr);}
+}
