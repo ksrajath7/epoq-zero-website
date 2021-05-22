@@ -414,6 +414,31 @@ body{
     background-color:#444;
   }
 
+
+
+
+  
+.blogs{
+    padding: 60px 0 20px 0;
+}
+
+.blog h1{
+    margin-bottom: 20px;
+    font-size: 19px;
+    color: #031B4E;
+}
+
+.blog p{
+    color: #5B6987;
+    margin-bottom: 80px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+  #content {
+    display: none;
+  }
+
 @media (min-width:600px) {
     .products-grid{grid-template-columns: repeat(2, 1fr);}
 }
@@ -432,6 +457,7 @@ body{
     .testimonials{padding: 100px 180px;}
     .mobileview{display: none;}
     .webview{display: block;}
+    .blog{padding: 50px 100px 0 100px;}
 }
 
 @media (min-width:1300px) {
@@ -441,6 +467,7 @@ body{
     .products-grid{grid-template-columns: repeat(3, 1fr);}
     .contact-div{padding: 100px 180px;}
     .testimonial{padding: 0 100px;}
+    .blog{padding: 50px 180px 0 180px;}
 }
 
 @media (min-width:1500px) {

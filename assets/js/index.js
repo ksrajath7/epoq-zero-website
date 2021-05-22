@@ -80,3 +80,21 @@ function openNav() {
   function closeNav() {
     document.getElementById("mySidepanel").style.width = "0";
   }
+
+
+
+  function readMoreFunction() {
+    var dots = document.getElementById("dots");
+    var contentText = document.getElementById("content");
+    var btnText = document.getElementById("buttonReadMore");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Click to Read More About the Blog";
+      contentText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read Less";
+      contentText.style.display = "inline";
+    }
+  }
