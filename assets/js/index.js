@@ -36,6 +36,9 @@ testimonials = [
     ]
 
 
+
+    
+
     function myFunction() {
         setInterval(() => {
             counter=(counter+1)%7
@@ -46,7 +49,10 @@ testimonials = [
         }, 10000);
       }
 
-      myFunction()
+    //   myFunction()
+
+
+
    
 
 var counter = 0
@@ -61,15 +67,17 @@ function nextComment(){
     document.getElementById("comment").textContent=testimonials[counter].comment
     document.getElementById("author").textContent=testimonials[counter].author
     document.getElementById("about").textContent=testimonials[counter].about
+    document.getElementById("counter").textContent=counter+1 + ' / 7'
 
 }
 
 function backComment(){
-    counter = (4+(counter-1))%7
+    counter = (7+(counter-1))%7
     console.log(counter)
     document.getElementById("comment").textContent=testimonials[counter].comment
     document.getElementById("author").textContent=testimonials[counter].author
     document.getElementById("about").textContent=testimonials[counter].about
+    document.getElementById("counter").textContent=counter+1 + ' / 7'
 
 }
 
