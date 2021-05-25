@@ -33,6 +33,10 @@ body{
     font-family: 'Gayathri', sans-serif;
 }
 
+.app-img{
+    width: 60%;
+    margin-bottom: 80px;
+}
 
 .header{
     background-color: white;
@@ -81,7 +85,7 @@ body{
     background-image: url('../img/circuits-blue-red-gradient-digital-background_23-2148821701 1.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-color: #0063FF;
     color: white;
 }
@@ -102,9 +106,34 @@ body{
 
 }
 
+.banner-div{
+    text-align: left;
+    padding: 60px 20px;
+    background-color: #F3F5F9;
+    color: #031B4E;
+    display: grid;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.banner-div h1{
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+
+.banner-div h4{
+    margin-bottom: 20px;
+}
+
+.banner-div p{
+    font-size: 20px;
+    color: #5B6987;
+}
+
+
 .vision-mission{
     padding: 20px 20px 0 20px;
-    background-color: #fff;
+    background-image: url('../img/bg.svg');
     color: #031B4E;
 }
 
@@ -270,6 +299,21 @@ body{
 }
 
 .more-works:hover{
+    border: 1px solid #031B4E;
+    color: #031B4E;
+}
+
+.view-more{
+    display: inline-block;
+    border-radius: 100px;
+    border: 1px solid #5B6987;
+    color: #5B6987;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 15px 30px;
+}
+
+.view-more:hover{
     border: 1px solid #031B4E;
     color: #031B4E;
 }
@@ -510,6 +554,7 @@ body{
 
 @media (min-width:800px) {
     .hero-div{padding: 80px 100px;}
+    .banner-div{grid-template-columns: repeat(2, 1fr);}
     .projects-grid{grid-template-columns: repeat(2, 1fr);}
     .contact-div{grid-template-columns: repeat(2, 1fr);}
     .career-div{padding: 80px 100px;}
@@ -529,6 +574,7 @@ body{
     .hero-div{padding: 120px 400px;}
     .vision-mission{padding: 50px 180px 0 180px;}
     .products-div{padding: 100px 180px;}
+    .banner-div{padding: 100px 180px;}
     .products-grid{grid-template-columns: repeat(3, 1fr);}
     .contact-div{padding: 100px 180px;}
     .testimonial{padding: 0 100px;}
