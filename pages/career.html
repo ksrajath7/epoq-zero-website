@@ -13,7 +13,7 @@
         }
         
         /* Style inputs */
-        input[type=text], select, textarea {
+        input[type=text], input[type=number], input[type=email], select, textarea {
             width: 100%;
             padding: 12px;
             border: 1px solid #ccc;
@@ -21,6 +21,7 @@
             margin-bottom: 16px;
             resize: vertical;
         }
+
         
         input[type=submit] {
             background-color: #4CAF50;
@@ -166,16 +167,18 @@
             <!-- <h4>Read the musings of our tech community…</h4> -->
         </div>
         <div class="careers">
+            <h1>SALES EXECUTIVE APPLICATION</h1>
+            <p>Fill up your details and our recruitment team will get back to you.</p>
             <!-- <div class="row"> -->
           
                 <!-- <div class="column"> -->
                     <form id="submit-form" action="">
                         <label for="fname">First Name</label>
-                        <input required type="text" id="fname" name="name" placeholder="Your name..">
+                        <input required type="text" id="fname" name="name" placeholder="">
                         <label for="lname">Email</label>
-                        <input required type="text" id="lname" name="email" placeholder="Your last name..">
+                        <input required type="email" id="lname" name="email" placeholder="">
                         <label for="contact">Contact</label>
-                        <input required type="text" id="contact" name="contact" placeholder="Your contact number..">
+                        <input required type="number" id="contact" name="contact" placeholder="">
                         <label for="describes">Contact</label>
                         <select required id="describes" name="describes">
                             <option value="Student">Student</option>

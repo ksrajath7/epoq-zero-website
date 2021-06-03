@@ -137,6 +137,20 @@ body{
     color: #031B4E;
 }
 
+.careers h1{
+    margin-bottom: 5px;
+    font-size: 19px;
+    color: #031B4E;
+}
+
+.careers p{
+    color: #5B6987;
+    margin-bottom: 40px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+
 
 .vision-mission{
     padding: 20px 20px 0 20px;
