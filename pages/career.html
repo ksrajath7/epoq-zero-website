@@ -173,19 +173,19 @@
           
                 <!-- <div class="column"> -->
                     <form id="submit-form" action="">
-                        <label for="fname">First Name</label>
+                        <label for="fname">Name <span style="color: red;">*</span></label>
                         <input required type="text" id="fname" name="name" placeholder="">
-                        <label for="lname">Email</label>
+                        <label for="lname">Email ID</label>
                         <input required type="email" id="lname" name="email" placeholder="">
-                        <label for="contact">Contact</label>
+                        <label for="contact">Contact <span style="color: red;">*</span></label>
                         <input required type="number" id="contact" name="contact" placeholder="">
-                        <label for="describes">Contact</label>
+                        <label for="describes">Which one of the following describes you the most? <span style="color: red;">*</span></label>
                         <select required id="describes" name="describes">
                             <option value="Student">Student</option>
                             <option value="Graduate">Graduate</option>
                             <option value="Experienced Professional">Experienced Professional</option>
                         </select>
-                        <label for="experience">Educational qualification/work experience (if any)</label>
+                        <label for="experience">Describe your educational qualification/work experience if any. </label>
                         <textarea required id="experience" name="experience" placeholder="Write something.." style="height:170px"></textarea>
                         <input type="submit" value="Submit">
                     </form>
