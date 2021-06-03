@@ -68,6 +68,7 @@
 </head>
 <body>
 
+
     <div class="headerContainer">
         <div class="header">
             <div class="header-logo-div">
@@ -187,7 +188,7 @@
                         </select>
                         <label for="experience">Describe your educational qualification/work experience if any. </label>
                         <textarea id="experience" name="experience" style="height:170px"></textarea>
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Submit" id="submit">
                     </form>
                 <!-- </div> -->
             <!-- </div> -->
@@ -222,6 +223,7 @@
 
     </div>
 
+    <div class="loader" id="loader" style="display:none;position: absolute;top:0;left: 0;right: 0;bottom: 0;background-color: #00000044;z-index: 20;"></div>
     
     
 </body>
@@ -230,15 +232,18 @@
 <script>
     $("#submit-form").submit((e)=>{
         e.preventDefault()
+        $('#loader').css('display', 'block');
         $.ajax({
             url:"https://script.google.com/macros/s/AKfycbzEFLx43UVANK8OGlM1wfzHIIvU8VTcRpUdga30d5eiZTbxlkrHJajTQ8aofEkV3fbbAA/exec",
             data:$("#submit-form").serialize(),
             method:"post",
             success:function (response){
                 alert("Form submitted successfully")
+                $("#loader").css('display', 'none');
                 window.location.replace("https://epoqzero.com/pages/career.html")
             },
             error:function (err){
+                $("#loader").css('display', 'none');
                 alert("Something Error")
 
             }
