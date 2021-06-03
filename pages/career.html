@@ -6,7 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <title>Epoq Zero</title>
+    <title>Careers at Epoq Zero</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        /* Style inputs */
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+        
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        
+        /* Style the container/contact section */
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+        
+        /* Create two columns that float next to eachother */
+        .column {
+            float: left;
+            width: 50%;
+            margin-top: 6px;
+            padding: 20px;
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .column, input[type=submit] {
+            width: 100%;
+            margin-top: 0;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -41,11 +98,11 @@
                         <p>Testimonials</p>
                     </div>
                 </a>
-                <!-- <a class="navLink" href="../pages/career.html">
+                <a class="navLink" href="">
                     <div class="navLink-div">
                         <p >Careers</p>
                     </div>
-                </a> -->
+                </a>
                 <a class="navLink" href="../#contact">
                     <div class="navLink-div">
                         <p>Contact</p>
@@ -87,11 +144,11 @@
                     <p>Testimonials</p>
                 </div>
             </a>
-            <!-- <a class="navLink" href="../pages/career.html">
+            <a class="navLink" href="">
                 <div class="navLink-div">
                     <p >Careers</p>
                 </div>
-            </a> -->
+            </a>
             <a class="navLink" href="../#contact">
                 <div class="navLink-div">
                     <p>Contact</p>
@@ -108,6 +165,32 @@
             <h1>Join Our Team</h1>
             <!-- <h4>Read the musings of our tech community…</h4> -->
         </div>
+        <div class="careers">
+            <!-- <div class="row"> -->
+          
+                <!-- <div class="column"> -->
+                    <form id="submit-form" action="">
+                        <label for="fname">First Name</label>
+                        <input required type="text" id="fname" name="name" placeholder="Your name..">
+                        <label for="lname">Email</label>
+                        <input required type="text" id="lname" name="email" placeholder="Your last name..">
+                        <label for="contact">Contact</label>
+                        <input required type="text" id="contact" name="contact" placeholder="Your contact number..">
+                        <label for="describes">Contact</label>
+                        <select required id="describes" name="describes">
+                            <option value="Student">Student</option>
+                            <option value="Graduate">Graduate</option>
+                            <option value="Experienced Professional">Experienced Professional</option>
+                        </select>
+                        <label for="experience">Educational qualification/work experience (if any)</label>
+                        <textarea required id="experience" name="experience" placeholder="Write something.." style="height:170px"></textarea>
+                        <input type="submit" value="Submit">
+                    </form>
+                <!-- </div> -->
+            <!-- </div> -->
+        </div>
+        
+
 
     
         <div class="contact-div" id="contact">
@@ -139,4 +222,23 @@
     
 </body>
 <script src="../assets/js/index.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $("#submit-form").submit((e)=>{
+        e.preventDefault()
+        $.ajax({
+            url:"https://script.google.com/macros/s/AKfycbxyIUM5-J4f1le6j7m5CJUo0OxTsRBBa9w_0Lzx1hh3bNWbMr3z91nYsf0cB-6gdw/exec",
+            data:$("#submit-form").serialize(),
+            method:"post",
+            success:function (response){
+                alert("Form submitted successfully")
+                window.location.reload()
+            },
+            error:function (err){
+                alert("Something Error")
+
+            }
+        })
+    })
+</script>
 </html>

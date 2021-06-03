@@ -131,6 +131,13 @@ body{
 }
 
 
+.careers{
+    padding: 20px;
+    background-image: url('../img/bg.svg');
+    color: #031B4E;
+}
+
+
 .vision-mission{
     padding: 20px 20px 0 20px;
     background-image: url('../img/bg.svg');
@@ -563,6 +570,7 @@ body{
 @media (min-width:1000px) {
     .navLinks{display: flex;}
     .vision-mission{padding: 50px 100px 0 100px;}
+    .careers{padding: 50px 330px}
     .products-grid{grid-template-columns: repeat(3, 1fr);}
     .testimonials{padding: 100px 180px;}
     .mobileview{display: none;}
@@ -573,6 +581,7 @@ body{
 @media (min-width:1300px) {
     .hero-div{padding: 120px 400px;}
     .vision-mission{padding: 50px 180px 0 180px;}
+    .careers{padding: 50px 500px}
     .products-div{padding: 100px 180px;}
     .banner-div{padding: 100px 180px;}
     .products-grid{grid-template-columns: repeat(3, 1fr);}
