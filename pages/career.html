@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,9 +12,13 @@
         * {
             box-sizing: border-box;
         }
-        
+
         /* Style inputs */
-        input[type=text], input[type=number], input[type=email], select, textarea {
+        input[type=text],
+        input[type=number],
+        input[type=email],
+        select,
+        textarea {
             width: 100%;
             padding: 12px;
             border: 1px solid #ccc;
@@ -22,7 +27,7 @@
             resize: vertical;
         }
 
-        
+
         input[type=submit] {
             background-color: #4CAF50;
             color: white;
@@ -30,18 +35,18 @@
             border: none;
             cursor: pointer;
         }
-        
+
         input[type=submit]:hover {
             background-color: #45a049;
         }
-        
+
         /* Style the container/contact section */
         .container {
             border-radius: 5px;
             background-color: #f2f2f2;
             padding: 10px;
         }
-        
+
         /* Create two columns that float next to eachother */
         .column {
             float: left;
@@ -49,23 +54,26 @@
             margin-top: 6px;
             padding: 20px;
         }
-        
+
         /* Clear floats after the columns */
         .row:after {
             content: "";
             display: table;
             clear: both;
         }
-        
+
         /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
         @media screen and (max-width: 600px) {
-            .column, input[type=submit] {
-            width: 100%;
-            margin-top: 0;
+
+            .column,
+            input[type=submit] {
+                width: 100%;
+                margin-top: 0;
             }
         }
     </style>
 </head>
+
 <body>
 
 
@@ -77,7 +85,7 @@
             <div class="navLinks">
                 <a href="../#" class="navLink">
                     <div class="navLink-div">
-                        <p >Home</p>
+                        <p>Home</p>
                     </div>
                 </a>
                 <a class="navLink" href="../#services">
@@ -102,7 +110,7 @@
                 </a>
                 <a class="navLink" href="">
                     <div class="navLink-div">
-                        <p >Careers</p>
+                        <p>Careers</p>
                     </div>
                 </a>
                 <a class="navLink" href="../#contact">
@@ -110,20 +118,20 @@
                         <p>Contact</p>
                     </div>
                 </a>
-                
+
             </div>
 
             <div class="spacing"></div>
 
             <button class="openbtn mobileview" onclick="openNav()">☰</button>
-            
+
         </div>
-        
+
         <div id="mySidepanel" class="sidepanel">
-            <a  class="closebtn" onclick="closeNav()">×</a>
+            <a class="closebtn" onclick="closeNav()">×</a>
             <a href="../#" class="navLink">
                 <div class="navLink-div">
-                    <p >Home</p>
+                    <p>Home</p>
                 </div>
             </a>
             <a class="navLink" href="../#services">
@@ -148,7 +156,7 @@
             </a>
             <a class="navLink" href="">
                 <div class="navLink-div">
-                    <p >Careers</p>
+                    <p>Careers</p>
                 </div>
             </a>
             <a class="navLink" href="../#contact">
@@ -156,11 +164,11 @@
                     <p>Contact</p>
                 </div>
             </a>
-          </div>
+        </div>
     </div>
 
-    
-    
+
+
     <div class="bodyContainer">
 
         <div class="career-div">
@@ -171,78 +179,92 @@
             <h1>SALES EXECUTIVE APPLICATION</h1>
             <p>Fill up your details and our recruitment team will get back to you.</p>
             <!-- <div class="row"> -->
-          
-                <!-- <div class="column"> -->
-                    <form id="submit-form" action="">
-                        <label for="fname">Name <span style="color: red;">*</span></label>
-                        <input required type="text" id="fname" name="name" placeholder="">
-                        <label for="lname">Email ID</label>
-                        <input type="email" id="lname" name="email" placeholder="">
-                        <label for="contact">Contact <span style="color: red;">*</span></label>
-                        <input required type="number" id="contact" name="contact" placeholder="">
-                        <label for="describes">Which one of the following describes you the most? <span style="color: red;">*</span></label>
-                        <select required id="describes" name="describes">
-                            <option value="Student">Student</option>
-                            <option value="Graduate">Graduate</option>
-                            <option value="Experienced Professional">Experienced Professional</option>
-                        </select>
-                        <label for="experience">Describe your educational qualification/work experience if any. </label>
-                        <textarea id="experience" name="experience" style="height:170px"></textarea>
-                        <input type="submit" value="Submit" id="submit">
-                    </form>
-                <!-- </div> -->
+
+            <!-- <div class="column"> -->
+            <form id="submit-form" action="">
+                <label for="fname">Name <span style="color: red;">*</span></label>
+                <input required type="text" id="fname" name="name" placeholder="">
+                <label for="lname">Email ID</label>
+                <input type="email" id="lname" name="email" placeholder="">
+                <label for="contact">Contact <span style="color: red;">*</span></label>
+                <input required type="number" id="contact" name="contact" placeholder="">
+                <label for="describes">Which one of the following describes you the most? <span
+                        style="color: red;">*</span></label>
+                <select required id="describes" name="describes">
+                    <option value="Student">Student</option>
+                    <option value="Graduate">Graduate</option>
+                    <option value="Experienced Professional">Experienced Professional</option>
+                </select>
+                <label for="experience">Describe your educational qualification/work experience if any. </label>
+                <textarea id="experience" name="experience" style="height:170px"></textarea>
+                <input type="submit" value="Submit" id="submit">
+            </form>
+            <!-- </div> -->
             <!-- </div> -->
         </div>
-        
 
 
-    
+
+
         <div class="contact-div" id="contact">
             <div class="contact-col">
                 <h1>Get In Touch</h1>
-                <p style="margin-bottom: 5px;">Do you have an idea you need to convert to a digital solution?<br/>
-                    Want to avail any of our services offered by experts in the field?<br/><br/><br/>
-                     Drop us a message at<br/><br/>
-                     <i class="fas fa-envelope-square fa-2x " style="margin-right: 10px;"></i>info@epoqzero.com<br/><br/>
-                     <i class="fas fa-envelope-square fa-2x " style="margin-right: 10px;"></i>epochzeroofficial@gmail.com<br/><br/>
-                     <i class="fas fa-phone-square-alt fa-2x" style="margin-right: 10px;"></i>(+91) 7560931829 / 8606207307 / 8078495140
-                    
-                    </p>
-        
+                <p style="margin-bottom: 5px;">Do you have an idea you need to convert to a digital solution?<br />
+                    Want to avail any of our services offered by experts in the field?<br /><br /><br />
+                    Drop us a message at<br /><br />
+                    <i class="fas fa-envelope-square fa-2x "
+                        style="margin-right: 10px;"></i>info@epoqzero.com<br /><br />
+                    <i class="fas fa-envelope-square fa-2x "
+                        style="margin-right: 10px;"></i>epochzeroofficial@gmail.com<br /><br />
+                    <i class="fas fa-phone-square-alt fa-2x" style="margin-right: 10px;"></i>(+91) 7560931829 /
+                    8606207307 / 8078495140
+
+                </p>
+
             </div>
+            <br />
+            <a href="https://api.whatsapp.com/send?phone=8606207307"><img src="./assets/img/whatsapp.png"
+                    width="30px"></a>
+
+
             <div class="contact-col">
                 <h1>Social Media</h1>
                 <p style="margin-bottom: 5px;">Prefer Social Media? Reach us here</p>
-                <a href="https://www.facebook.com/Epoch-zero-101920955183831/" class="social-icon"><i class="fab fa-facebook fa-2x"></i></a>
-                <a href="https://twitter.com/zero_epoch?lang=en" class="social-icon"><i class="fab fa-twitter fa-2x"></i></a>
-                <a href="https://www.instagram.com/epoq.zero/" class="social-icon"><i class="fab fa-instagram fa-2x"></i></a>
-                <a href="https://www.linkedin.com/company/epoch-zero" class="social-icon"><i class="fab fa-linkedin fa-2x"></i></a>
-                
+                <a href="https://www.facebook.com/epoqzero/" class="social-icon"><i
+                        class="fab fa-facebook fa-2x"></i></a>
+                <a href="https://twitter.com/epoqzero/" class="social-icon"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://www.instagram.com/epoqzero/" class="social-icon"><i
+                        class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://www.linkedin.com/company/epoqzero/" class="social-icon"><i
+                        class="fab fa-linkedin fa-2x"></i></a>
+
             </div>
         </div>
 
     </div>
 
-    <div class="loader" id="loader" style="display:none;position: absolute;top:0;left: 0;right: 0;bottom: 0;background-color: #00000044;z-index: 20;"></div>
-    
-    
+    <div class="loader" id="loader"
+        style="display:none;position: absolute;top:0;left: 0;right: 0;bottom: 0;background-color: #00000044;z-index: 20;">
+    </div>
+
+
 </body>
 <script src="../assets/js/index.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-    $("#submit-form").submit((e)=>{
+    $("#submit-form").submit((e) => {
         e.preventDefault()
         $('#loader').css('display', 'block');
         $.ajax({
-            url:"https://script.google.com/macros/s/AKfycbzEFLx43UVANK8OGlM1wfzHIIvU8VTcRpUdga30d5eiZTbxlkrHJajTQ8aofEkV3fbbAA/exec",
-            data:$("#submit-form").serialize(),
-            method:"post",
-            success:function (response){
+            url: "https://script.google.com/macros/s/AKfycbzEFLx43UVANK8OGlM1wfzHIIvU8VTcRpUdga30d5eiZTbxlkrHJajTQ8aofEkV3fbbAA/exec",
+            data: $("#submit-form").serialize(),
+            method: "post",
+            success: function (response) {
                 alert("Form submitted successfully")
                 $("#loader").css('display', 'none');
                 window.location.replace("https://epoqzero.com/pages/career.html")
             },
-            error:function (err){
+            error: function (err) {
                 $("#loader").css('display', 'none');
                 alert("Something Error")
 
@@ -250,4 +272,5 @@
         })
     })
 </script>
+
 </html>
