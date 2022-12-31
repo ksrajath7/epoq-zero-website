@@ -582,6 +582,15 @@ body{
     .career-div{padding: 80px 100px;}
 }
 
+
+@media (min-width:1200px) {
+    .projects-grid{grid-template-columns: repeat(4, 1fr);}
+}
+
+@media (min-width:4000px) {
+    .projects-grid{grid-template-columns: repeat(8, 1fr);}
+}
+
 @media (min-width:1000px) {
     .navLinks{display: flex;}
     .vision-mission{padding: 50px 100px 0 100px;}
