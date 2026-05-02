@@ -135,9 +135,9 @@
         }
 
         .process-card:hover {
-            transform: translateY(-15px);
             background: rgba(255, 255, 255, 0.05);
             border-color: var(--accent-primary);
+            box-shadow: 0 0 30px rgba(0, 123, 255, 0.1);
         }
 
         .process-number {
@@ -224,8 +224,7 @@
 
         .dna-card:hover {
             border-color: var(--accent-primary);
-            box-shadow: 0 40px 80px rgba(0, 123, 255, 0.15);
-            transform: translateY(-15px);
+            box-shadow: 0 0 40px rgba(0, 123, 255, 0.15);
             background: rgba(255, 255, 255, 0.05);
         }
 
@@ -238,7 +237,37 @@
             letter-spacing: -1px;
         }
 
+        .about-lead {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .about-subtext {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
         @media (max-width: 968px) {
+            .about-page-hero {
+                padding: 140px 5% 80px;
+            }
+
+            .hero-title {
+                font-size: clamp(2.5rem, 8vw, 4rem);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .about-section, .culture-section {
+                padding: 80px 5%;
+            }
+
             .dna-grid {
                 grid-template-columns: 1fr;
             }
@@ -246,10 +275,57 @@
             .dna-card {
                 padding: 40px;
             }
+
+            .mission-box {
+                padding: 30px;
+            }
+
+            .mission-box h3 {
+                font-size: 1.5rem;
+            }
+
+            .process-cards {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .mission-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .mission-vision {
+                padding: 60px 5%;
+                border-radius: 40px;
+                margin: 0 5%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title br {
+                display: none;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        .dna-section {
+            background: radial-gradient(circle at center, rgba(0, 123, 255, 0.05) 0%, transparent 70%);
+            margin: 0 5%;
+            border-radius: 60px;
+        }
+
+        @media (max-width: 968px) {
+            .dna-section {
+                margin: 0 2%;
+                border-radius: 40px;
+            }
         }
     </style>
-  <link rel="stylesheet" crossorigin href="./assets/project-style-DqqBZBHs.css">
-  <link rel="stylesheet" crossorigin href="./assets/style-B6K-6rNt.css">
+  <link rel="stylesheet" crossorigin href="./assets/project-style-B-IcZ9Aq.css">
+  <link rel="stylesheet" crossorigin href="./assets/style-DKhirnGi.css">
 </head>
 
 <body>
@@ -287,12 +363,12 @@
             <div class="about-text">
                 <div class="section-tag">Our Philosophy</div>
                 <h2 class="section-title">Your Dependable <br>Software Partner</h2>
-                <p style="font-size: 1.2rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 30px;">
+                <p class="about-lead">
                     At Epoq Zero, we don't just build software; we build partnerships. We immerse ourselves in your
                     business, becoming a genuine extension of your "work family." This deep connection allows us to
                     understand your challenges at their core and deliver solutions that truly resonate.
                 </p>
-                <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8;">
+                <p class="about-subtext">
                     From fledgling startups to established enterprises, we've helped countless businesses scale their
                     digital footprint with precision-engineered apps and platforms.
                 </p>
@@ -347,8 +423,7 @@
         </div>
     </section>
 
-    <section class="about-section"
-        style="background: radial-gradient(circle at center, rgba(0, 123, 255, 0.05) 0%, transparent 70%); margin: 0 5%; border-radius: 60px; padding: 120px 8%;">
+    <section class="about-section dna-section">
         <div style="text-align: center; margin-bottom: 40px;">
             <div class="section-tag">Our DNA</div>
             <h2 class="section-title">Beyond the Code</h2>
