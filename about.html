@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Epoq Zero</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="/favicon.svg" color="#2563eb">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <meta name="msapplication-TileColor" content="#2563eb">
+    <meta name="theme-color" content="#050505">
+    <style>
+        :root {
+            --primary-glow: radial-gradient(circle, rgba(0, 123, 255, 0.15) 0%, transparent 70%);
+            --secondary-glow: radial-gradient(circle, rgba(0, 210, 255, 0.1) 0%, transparent 70%);
+        }
+
+        .about-page-hero {
+            position: relative;
+            padding: 180px 8% 120px;
+            text-align: center;
+            overflow: hidden;
+            background: #050505;
+        }
+
+        .about-page-hero::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 100%;
+            background: var(--primary-glow);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .hero-title {
+            font-size: clamp(3.5rem, 10vw, 6rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+            background: linear-gradient(135deg, #fff 40%, var(--accent-primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 30px auto 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-section {
+            padding: 100px 8%;
+            position: relative;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+            align-items: center;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+        }
+
+        .about-image-wrapper img {
+            width: 100%;
+            border-radius: 40px;
+            box-shadow: 0 50px 100px rgba(0, 0, 0, 0.5);
+            transition: transform 0.5s ease;
+        }
+
+        .about-image-wrapper:hover img {
+            transform: scale(1.02) translateY(-10px);
+        }
+
+        .about-image-wrapper::after {
+            content: '';
+            position: absolute;
+            inset: -20px;
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        .section-tag {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(0, 123, 255, 0.1);
+            color: var(--accent-secondary);
+            border-radius: 100px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .process-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .process-card {
+            padding: 40px;
+            border-radius: 30px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .process-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 30px rgba(0, 123, 255, 0.1);
+        }
+
+        .process-number {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--accent-primary);
+            opacity: 0.1;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+        }
+
+        .process-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .process-card p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .mission-vision {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 60px;
+            margin: 0 5%;
+            padding: 100px 8%;
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .mission-box {
+            padding: 40px;
+            border-left: 4px solid var(--accent-primary);
+            background: linear-gradient(90deg, rgba(0, 123, 255, 0.05) 0%, transparent 100%);
+        }
+
+        .mission-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .culture-section {
+            padding: 120px 8%;
+            text-align: center;
+        }
+
+        .culture-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .culture-image {
+            margin-top: 60px;
+            width: 100%;
+            border-radius: 40px;
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+        }
+
+        .dna-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .dna-card {
+            padding: 50px;
+            border-radius: 40px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: left;
+        }
+
+        .dna-card:hover {
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 40px rgba(0, 123, 255, 0.15);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .dna-card h3 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 30%, var(--accent-primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+
+        .about-lead {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .about-subtext {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        @media (max-width: 968px) {
+            .about-page-hero {
+                padding: 140px 5% 80px;
+            }
+
+            .hero-title {
+                font-size: clamp(2.5rem, 8vw, 4rem);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .about-section,
+            .culture-section {
+                padding: 80px 5%;
+            }
+
+            .dna-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .dna-card {
+                padding: 40px;
+            }
+
+            .mission-box {
+                padding: 30px;
+            }
+
+            .mission-box h3 {
+                font-size: 1.5rem;
+            }
+
+            .process-cards {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .mission-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .mission-vision {
+                padding: 60px 5%;
+                border-radius: 40px;
+                margin: 0 5%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title br {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        .dna-section {
+            background: radial-gradient(circle at center, rgba(0, 123, 255, 0.05) 0%, transparent 70%);
+            margin: 0 5%;
+            border-radius: 60px;
+        }
+
+        @media (max-width: 968px) {
+            .dna-section {
+                margin: 0 2%;
+                border-radius: 40px;
+            }
+        }
+    </style>
+  <script type="module" crossorigin src="./assets/main-Bf2zVvrH.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/project-style-aY_IAS3_.css">
+  <link rel="stylesheet" crossorigin href="./assets/style-DtVgNIkq.css">
+</head>
+
+<body>
+    <nav id="navbar" class="scrolled">
+        <a href="index.html" class="logo">
+            <img src="./assets/logo1-C0n-bgXC.svg" alt="Epoq Zero Logo">
+        </a>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html#services">Services</a>
+            <a href="index.html#portfolio">Portfolio</a>
+            <a href="./projects/epoq-connect.html">Epoq Connect</a>
+            <a href="index.html#testimonials">Testimonials</a>
+            <a href="about.html">About</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="index.html#contact" class="btn-primary mobile-only">Get in Touch</a>
+        </div>
+        <a href="index.html#contact" class="btn-primary desktop-only">Get in Touch</a>
+        <button class="hamburger" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+
+    <header class="about-page-hero">
+        <div class="section-tag">Since 2020</div>
+        <h1 class="hero-title">Engineering the <br>Future of Digital</h1>
+        <p class="hero-subtitle">We're a team of passionate creators, engineers, and strategists dedicated to turning
+            visionary ideas into world-class digital products.</p>
+    </header>
+
+    <section class="about-section">
+        <div class="about-grid">
+            <div class="about-text">
+                <div class="section-tag">Our Philosophy</div>
+                <h2 class="section-title">Your Dependable <br>Software Partner</h2>
+                <p class="about-lead">
+                    At Epoq Zero, we don't just build software; we build partnerships. We immerse ourselves in your
+                    business, becoming a genuine extension of your "work family." This deep connection allows us to
+                    understand your challenges at their core and deliver solutions that truly resonate.
+                </p>
+                <p class="about-subtext">
+                    From fledgling startups to established enterprises, we've helped countless businesses scale their
+                    digital footprint with precision-engineered apps and platforms.
+                </p>
+            </div>
+            <div class="about-image-wrapper">
+                <img src="./assets/about_hero_v2.png" alt="Epoq Zero Collaboration">
+            </div>
+        </div>
+    </section>
+
+    <section class="mission-vision">
+        <div class="mission-grid">
+            <div class="mission-box">
+                <h3>Our Mission</h3>
+                <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.7;">To develop products and
+                    provide services by leveraging technology following client centric approach with utmost integrity
+                    and transparency.</p>
+            </div>
+            <div class="mission-box" style="border-color: var(--accent-secondary);">
+                <h3>Our Vision</h3>
+                <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.7;">To transcend ideas into
+                    solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" style="padding-top: 140px;">
+        <div style="text-align: center; margin-bottom: 80px;">
+            <div class="section-tag">The Blueprint</div>
+            <h2 class="section-title">How We Deliver Excellence</h2>
+        </div>
+
+        <div class="process-cards">
+            <div class="process-card">
+                <div class="process-number">01</div>
+                <h3>Discovery</h3>
+                <p>We deep-dive into your objectives, mapping out the roadmap to success through collaborative
+                    brainstorming.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-number">02</div>
+                <h3>Strategy</h3>
+                <p>Developing a robust technical architecture and design framework that balances speed with long-term
+                    scalability.</p>
+            </div>
+            <div class="process-card">
+                <div class="process-number">03</div>
+                <h3>Execution</h3>
+                <p>Our agile team brings the vision to life with clean code, modern stacks, and rigorous quality
+                    assurance.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section dna-section">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <div class="section-tag">Our DNA</div>
+            <h2 class="section-title">Beyond the Code</h2>
+            <p style="color: var(--text-secondary); max-width: 800px; margin: 0 auto; font-size: 1.2rem;">Our history is
+                written in the success of our partners. Here are the values that drive every line of code we write.</p>
+        </div>
+
+        <div class="dna-grid">
+            <div class="dna-card">
+                <h3>Global Synergy</h3>
+                <p>Innovation transcends borders. We bridge international expertise with local insights, ensuring that
+                    every project benefits from a global perspective while maintaining the intimate, dedicated attention
+                    of a boutique studio.
+                </p>
+            </div>
+            <div class="dna-card">
+                <h3>Technical Agility</h3>
+                <p>We stay ahead of the curve so you don't have to. Our team specializes in modernizing legacy systems
+                    and architecting high-performance ecosystems using the most resilient modern technologies to ensure
+                    your business remains future-proof.
+                </p>
+            </div>
+            <div class="dna-card">
+                <h3>Nurturing Talent</h3>
+                <p>We build the future of engineering. Many of our cornerstone projects serve as intensive training
+                    grounds where senior architects mentor the next generation of talent, ensuring a legacy of
+                    excellence for years to come.</p>
+            </div>
+            <div class="dna-card">
+                <h3>Our Roots</h3>
+                <p>Every journey has a beginning. From our first commissioned work with <strong>Estudo</strong> to the
+                    decade-long "family" relationships we maintain today, our history is a testament to the power of
+                    long-term trust.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="culture-section">
+        <div class="culture-content">
+            <div class="section-tag">Work Family</div>
+            <h2 class="section-title">Built on Culture</h2>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); line-height: 1.8;">
+                We believe that great software is a byproduct of a great environment. Our culture is built on transparency, continuous learning, and a shared passion for excellence. We celebrate wins together and tackle challenges as a unit.
+            </p>
+            <img src="./assets/team_culture.png" alt="Our Team Culture" class="culture-image">
+        </div>
+    </section> -->
+
+    <section class="about-section"
+        style="background: var(--glass-bg); margin: 60px 5%; border-radius: 40px; text-align: center;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Ready to build something great?</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 40px; font-size: 1.1rem;">Join the growing list of
+            businesses that trust Epoq Zero.</p>
+        <a href="index.html#contact" class="btn-primary" style="padding: 16px 40px; font-size: 1.1rem;">Start Your
+            Journey</a>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="./assets/logo1-C0n-bgXC.svg" alt="Epoq Zero Logo">
+                </a>
+                <p>Smart Software Solutions for Smart Businesses.</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/company/epoqzero/" target="_blank" class="social-link"
+                    aria-label="LinkedIn">
+                    <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                </a>
+                <a href="https://twitter.com/epoqzero/" target="_blank" class="social-link" aria-label="Twitter">
+                    <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/epoqzero/" target="_blank" class="social-link" aria-label="Facebook">
+                    <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/epoqzero/" target="_blank" class="social-link"
+                    aria-label="Instagram">
+                    <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.063 1.366-.333 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.063-2.633-.333-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07M12 0C8.741 0 8.333.014 7.053.072 2.695.272.272 2.69.072 7.053.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.351-.2 6.78-2.618 6.98-6.98.058-1.28.072-1.689.072-4.948s-.014-3.667-.072-4.947c-.2-4.353-2.612-6.78-6.98-6.98C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright">&copy; 2026 Epoq Zero LLP. All rights reserved.</div>
+            <div class="footer-links">
+                <a href="index.html#services">Services</a>
+                <a href="index.html#portfolio">Portfolio</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
