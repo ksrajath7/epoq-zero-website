@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Mobile App Development Company in Kerala | Epoq Zero</title>
+    <meta name="description"
+        content="Epoq Zero is the best Mobile app development company in Kerala. We build custom, high-performance iOS, Android and cross platform applications for startups & enterprises.">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./favicon.svg" color="#2563eb">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <meta name="msapplication-TileColor" content="#2563eb">
+    <meta name="theme-color" content="#050505">
+    
+    <style>
+        :root {
+            --primary-glow: radial-gradient(circle, rgba(0, 123, 255, 0.15) 0%, transparent 70%);
+            --secondary-glow: radial-gradient(circle, rgba(0, 210, 255, 0.1) 0%, transparent 70%);
+        }
+
+        .service-page-hero {
+            position: relative;
+            padding: 180px 8% 120px;
+            text-align: center;
+            overflow: hidden;
+            background: #050505;
+        }
+
+        .service-page-hero::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 100%;
+            background: var(--primary-glow);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .hero-title {
+            font-size: clamp(2.8rem, 8vw, 5rem);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+            background: linear-gradient(135deg, #fff 40%, var(--accent-primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 30px auto 0;
+            position: relative;
+            z-index: 1;
+            line-height: 1.7;
+        }
+
+        .content-section {
+            padding: 100px 8%;
+            position: relative;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .tech-stack-visual {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .tech-box {
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid var(--glass-border);
+            background: var(--glass-bg);
+            transition: all 0.3s ease;
+        }
+
+        .tech-box:hover {
+            border-color: var(--accent-primary);
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-5px);
+        }
+
+        .tech-box h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .tech-box p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .section-tag {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(0, 123, 255, 0.1);
+            color: var(--accent-secondary);
+            border-radius: 100px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .lead-text {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            padding: 40px;
+            border-radius: 30px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 30px rgba(0, 123, 255, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 968px) {
+            .service-page-hero {
+                padding: 140px 5% 80px;
+            }
+
+            .hero-title {
+                font-size: clamp(2.2rem, 8vw, 3.8rem);
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .content-section {
+                padding: 80px 5%;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+    
+    <link rel="canonical" href="https://epoqzero.com/best-mobile-app-development-company-in-kerala">
+    <meta property="og:url" content="https://epoqzero.com/best-mobile-app-development-company-in-kerala">
+
+    <!-- Structured Data Schema for Site Search Representation -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Epoq Zero",
+      "alternateName": "Epoq Zero LLP",
+      "url": "https://epoqzero.com/"
+    }
+    </script>
+
+    <!-- BreadcrumbList Schema for Google SERP Arrows -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://epoqzero.com/"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Best Mobile App Development Company in Kerala",
+        "item": "https://epoqzero.com/best-mobile-app-development-company-in-kerala"
+      }]
+    }
+    </script>
+  <script type="module" crossorigin src="./assets/main-CVvHM_Ab.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/project-style-BjscRWLr.css">
+  <link rel="stylesheet" crossorigin href="./assets/style-BHwlTYY8.css">
+</head>
+
+<body>
+    <nav id="navbar" class="scrolled">
+        <a href="/" class="logo">
+            <img src="./assets/logo1-C0n-bgXC.svg" alt="Epoq Zero Logo">
+        </a>
+        <div class="nav-links" id="nav-links">
+            <a href="/#services">Services</a>
+            <a href="/#portfolio">Portfolio</a>
+            <a href="/projects/epoq-connect">Epoq Connect</a>
+            <a href="/#testimonials">Testimonials</a>
+            <a href="/about">About</a>
+            <a href="/#contact">Contact</a>
+            <a href="/#contact" class="btn-primary mobile-only">Get in Touch</a>
+        </div>
+        <a href="/#contact" class="btn-primary desktop-only">Get in Touch</a>
+        <button class="hamburger" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <header class="service-page-hero">
+        <div class="section-tag">Award-Winning Engineering Studio</div>
+        <h1 class="hero-title">Best Mobile App Development <br>Company in Kerala</h1>
+        <p class="hero-subtitle">Epoq Zero is recognized as the leading mobile application engineering studio in Kerala. We craft beautiful, high-performing iOS, Android, and hybrid applications optimized for business growth.</p>
+    </header>
+
+    <section class="content-section">
+        <div class="content-grid">
+            <div class="content-text">
+                <div class="section-tag">Leading App Experts</div>
+                <h2 class="section-title">Engineered to Succeed, Scaled to Win</h2>
+                <p class="lead-text">
+                    As Kerala's premiere custom software and mobile app studio, we deliver feature-rich, high-performance mobile software environments that redefine industry standards. We believe in strict code quality, reliable APIs, and sleek user-centric experiences.
+                </p>
+                <p style="color: var(--text-secondary); line-height: 1.8;">
+                    From advanced CRM native mobile companion utilities to digital credentials ecosystem applications, our diverse portfolio highlights our specialized capacity to serve startups, growing mid-size, and global enterprises seeking maximum reliability and clean design.
+                </p>
+            </div>
+            <div class="tech-stack-visual">
+                <div class="tech-box">
+                    <h4>Flutter</h4>
+                    <p>Expressive cross-platform apps</p>
+                </div>
+                <div class="tech-box">
+                    <h4>React Native</h4>
+                    <p>Native look and web flexibility</p>
+                </div>
+                <div class="tech-box">
+                    <h4>iOS Native</h4>
+                    <p>Swift-engineered premium quality</p>
+                </div>
+                <div class="tech-box">
+                    <h4>Android Native</h4>
+                    <p>Kotlin-built high performance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" style="background: rgba(255, 255, 255, 0.01); border-top: 1px solid rgba(255, 255, 255, 0.03);">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto 50px;">
+            <div class="section-tag">Proven Process</div>
+            <h2 class="section-title">Our Development Standards</h2>
+            <p style="color: var(--text-secondary);">We combine creative design with rock-solid engineering to launch apps that users love.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>1. High-Fidelity UX Design</h3>
+                <p>We craft clean, modern, and engaging user flows, ensuring your mobile application is both beautiful and highly intuitive to use.</p>
+            </div>
+            <div class="feature-card">
+                <h3>2. Clean & Scalable Code</h3>
+                <p>Our engineers construct robust, documented software architectures that keep your application fast, secure, and ready for future updates.</p>
+            </div>
+            <div class="feature-card">
+                <h3>3. App Store Deployment</h3>
+                <p>We handle the complete submission pipeline to the Google Play Store and Apple App Store, making launch day a stress-free milestone.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section"
+        style="background: var(--glass-bg); margin: 60px 5%; border-radius: 40px; text-align: center;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Have a Mobile App Idea?</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 40px; font-size: 1.1rem;">Let's build a fast, reliable, and premium application for your business.</p>
+        <a href="/#contact" class="btn-primary" style="padding: 16px 40px; font-size: 1.1rem;">Get a Free Consultation</a>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="/" class="logo">
+                    <img src="./assets/logo1-C0n-bgXC.svg" alt="Epoq Zero Logo">
+                </a>
+                <p>Smart Custom Software to Simplify Your Business.</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/company/epoqzero/" target="_blank" class="social-link"
+                    aria-label="LinkedIn">
+                    <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                </a>
+                <a href="https://twitter.com/epoqzero/" target="_blank" class="social-link" aria-label="Twitter">
+                    <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/epoqzero/" target="_blank" class="social-link" aria-label="Facebook">
+                    <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/epoqzero/" target="_blank" class="social-link"
+                    aria-label="Instagram">
+                    <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.063 1.366-.333 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.063-2.633-.333-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07M12 0C8.741 0 8.333.014 7.053.072 2.695.272.272 2.69.072 7.053.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.351-.2 6.78-2.618 6.98-6.98.058-1.28.072-1.689.072-4.948s-.014-3.667-.072-4.947c-.2-4.353-2.612-6.78-6.98-6.98C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright">&copy; 2026 Epoq Zero LLP. All rights reserved.</div>
+            <div class="footer-links">
+                <a href="/#services">Services</a>
+                <a href="/#portfolio">Portfolio</a>
+                <a href="/#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
