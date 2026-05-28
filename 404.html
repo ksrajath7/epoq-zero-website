@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Epoq Zero</title>
+    <meta name="description" content="The page you are looking for has migrated or does not exist. Explore Epoq Zero's custom software solutions or conversational SaaS CRMs.">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <meta name="theme-color" content="#012B30">
+    
+    <!-- CSS Stylesheet -->
+
+    <!-- Styles specifically for the 404 page layout and transitions -->
+    <style>
+        .error-section {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 24px 80px 24px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .error-container {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .error-badge {
+            display: inline-block;
+            padding: 8px 18px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 100px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            margin-bottom: 24px;
+        }
+
+        .error-title {
+            font-family: var(--font-title);
+            font-size: clamp(6rem, 15vw, 10rem);
+            line-height: 1;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            filter: drop-shadow(0 0 30px rgba(0, 210, 255, 0.15));
+            animation: pulseGlow 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulseGlow {
+            0% {
+                filter: drop-shadow(0 0 20px rgba(0, 210, 255, 0.1));
+            }
+            100% {
+                filter: drop-shadow(0 0 45px rgba(0, 210, 255, 0.35));
+            }
+        }
+
+        .error-subtitle {
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .error-desc {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            max-width: 580px;
+            margin: 0 auto 40px auto;
+            line-height: 1.6;
+        }
+
+        /* Recovery Links Grid */
+        .recovery-grid-title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--accent-secondary);
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+
+        .recovery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            max-width: 600px;
+            margin: 0 auto 48px auto;
+        }
+
+        @media (max-width: 580px) {
+            .recovery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .recovery-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            padding: 20px 24px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .recovery-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 210, 255, 0.05), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .recovery-card:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(0, 210, 255, 0.3);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .recovery-card:hover::before {
+            opacity: 1;
+        }
+
+        .recovery-icon {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .recovery-card h4 {
+            font-size: 1.05rem;
+            color: #ffffff;
+            margin-bottom: 6px;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .recovery-card p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            position: relative;
+            z-index: 2;
+        }
+
+        .error-actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        @media (max-width: 480px) {
+            .error-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            .error-actions a {
+                width: 100%;
+                max-width: 280px;
+                text-align: center;
+            }
+        }
+    </style>
+  <script type="module" crossorigin src="./assets/main-B8zkKyBt.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/style-BHwlTYY8.css">
+</head>
+
+<body>
+    <!-- Navigation Bar (Agency dark style) -->
+    <nav id="navbar">
+        <a href="/" class="logo">
+            <img src="./assets/logo1-C0n-bgXC.svg" alt="Epoq Zero Logo">
+        </a>
+        <div class="nav-links" id="nav-links">
+            <a href="/#services">Services</a>
+            <a href="/#portfolio">Portfolio</a>
+            <a href="/projects/epoq-connect">Epoq Connect</a>
+            <a href="/#testimonials">Testimonials</a>
+            <a href="/about">About</a>
+            <a href="/#contact">Contact</a>
+            <a href="/#contact" class="btn-primary mobile-only">Get in Touch</a>
+        </div>
+        <a href="/#contact" class="btn-primary desktop-only">Get in Touch</a>
+        <button class="hamburger" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- 404 Error Content -->
+    <section class="error-section">
+        <div class="error-container">
+            <div class="badge glass error-badge">404 Error</div>
+            <div class="error-title">404</div>
+            <h2 class="error-subtitle">Lost in Space?</h2>
+            <p class="error-desc">The page you are looking for has migrated, has been renamed, or does not exist. Let's get you back on track.</p>
+
+            <h3 class="recovery-grid-title">Helpful Recovery Links</h3>
+
+            <div class="recovery-grid">
+                <!-- Link 1: Connect CRM -->
+                <a href="/projects/epoq-connect" class="recovery-card">
+                    <span class="recovery-icon">💬</span>
+                    <h4>Conversational CRM ➔</h4>
+                    <p>Unify WhatsApp and lead queues in one workspace.</p>
+                </a>
+                
+                <!-- Link 2: Travel CRM -->
+                <a href="/travel-crm-software" class="recovery-card">
+                    <span class="recovery-icon">✈️</span>
+                    <h4>Tours & Travel CRM ➔</h4>
+                    <p>Manage itineraries, vouchers, and visa tracking.</p>
+                </a>
+
+                <!-- Link 3: Education CRM -->
+                <a href="/education-crm-software" class="recovery-card">
+                    <span class="recovery-icon">🎓</span>
+                    <h4>Admissions CRM ➔</h4>
+                    <p>Streamline course inquiry follow-ups and registrations.</p>
+                </a>
+
+                <!-- Link 4: Retail CRM -->
+                <a href="/retail-crm-software" class="recovery-card">
+                    <span class="recovery-icon">🛍️</span>
+                    <h4>Retail & Salon CRM ➔</h4>
+                    <p>Track stylist bookings and customer loyalty ledgers.</p>
+                </a>
+            </div>
+
+            <div class="error-actions">
+                <a href="/" class="btn-primary">Return to Homepage</a>
+                <a href="/#contact" class="btn-secondary">Book a Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="/" class="logo">
+                    <img src="./assets/logo1-C0n-bgXC.svg" alt="Epoq Zero Logo">
+                </a>
+                <p>Engineering digital excellence for the visionary.</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/company/epoqzero/" target="_blank" class="social-link" aria-label="LinkedIn">
+                    <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                </a>
+                <a href="https://twitter.com/epoqzero/" target="_blank" class="social-link" aria-label="Twitter">
+                    <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/epoqzero/" target="_blank" class="social-link" aria-label="Facebook">
+                    <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/epoqzero/" target="_blank" class="social-link" aria-label="Instagram">
+                    <svg fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.063 1.366-.333 2.633-1.308 3.608-.975.975-2.242 1.245-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.063-2.633-.333-3.608-1.308-.975-.975-1.245-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.608-1.308 1.266-.058 1.646-.07 4.85-.07M12 0C8.741 0 8.333.014 7.053.072 2.695.272.272 2.69.072 7.053.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.351-.2 6.78-2.618 6.98-6.98.058-1.28.072-1.689.072-4.948s-.014-3.667-.072-4.947c-.2-4.353-2.612-6.78-6.98-6.98C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright">&copy; 2026 Epoq Zero LLP. All rights reserved.</div>
+            <div class="footer-links">
+                <a href="/#services">Services</a>
+                <a href="/#portfolio">Portfolio</a>
+                <a href="/#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global Module Script -->
+</body>
+
+</html>
