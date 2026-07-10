@@ -113,8 +113,21 @@
       }]
     }
     </script>
+    <!-- Early theme detection to prevent flash of unstyled content (FOUC) -->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'comic') {
+                document.documentElement.setAttribute('data-theme', 'comic');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
+        })();
+    </script>
+  <script type="module" crossorigin src="../assets/main-LXkkl7kA.js"></script>
+  <script type="module" crossorigin src="../assets/theme-DY8xIrSq.js"></script>
   <link rel="stylesheet" crossorigin href="../assets/epoq-connect-DZEFa6OL.css">
-  <link rel="stylesheet" crossorigin href="../assets/style-BHwlTYY8.css">
+  <link rel="stylesheet" crossorigin href="../assets/style-DGuwzlV6.css">
 </head>
 
 <body class="epoq-light-theme">

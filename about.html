@@ -324,12 +324,155 @@
                 border-radius: 40px;
             }
         }
+
+        /* ─── Comic Theme Overrides for About Page ─── */
+        [data-theme="comic"] .about-page-hero {
+            background: var(--bg-color);
+            border-bottom: var(--section-side-border);
+        }
+
+        [data-theme="comic"] .hero-title {
+            color: var(--text-primary);
+            -webkit-text-fill-color: var(--text-primary);
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            -webkit-text-stroke: 2px #1a1a1a;
+            paint-order: stroke fill;
+            background: none;
+        }
+
+        [data-theme="comic"] .section-tag {
+            background: #ffe600 !important;
+            color: #1a1a1a !important;
+            border: 2px solid #1a1a1a !important;
+            box-shadow: 2px 2px 0 #1a1a1a !important;
+            font-family: var(--font-heading) !important;
+            letter-spacing: 0.05em !important;
+            opacity: 1 !important;
+            text-shadow: none !important;
+        }
+
+        [data-theme="comic"] .section-title {
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            color: var(--text-primary);
+        }
+
+        [data-theme="comic"] .mission-vision {
+            background: none;
+        }
+
+        [data-theme="comic"] .mission-box {
+            background: #fff;
+            border: var(--border-width) solid #1a1a1a !important;
+            box-shadow: var(--shadow-comic) !important;
+            border-radius: 16px !important;
+            transition: all 0.3s ease;
+        }
+
+        [data-theme="comic"] .mission-box:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 9px 9px 0px #1a1a1a !important;
+        }
+
+        [data-theme="comic"] .mission-box h3 {
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            color: var(--accent-primary);
+            font-size: 2rem;
+        }
+
+        [data-theme="comic"] .process-card,
+        [data-theme="comic"] .dna-card {
+            background: #fff;
+            border: var(--border-width) solid #1a1a1a;
+            box-shadow: var(--shadow-comic);
+            border-radius: 16px;
+        }
+
+        [data-theme="comic"] .process-card:hover,
+        [data-theme="comic"] .dna-card:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 9px 9px 0px #1a1a1a;
+            background: #fff;
+            border-color: var(--accent-primary);
+        }
+
+        [data-theme="comic"] .process-card h3 {
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            color: var(--text-primary);
+            font-size: 1.8rem;
+        }
+
+        [data-theme="comic"] .process-number {
+            font-family: var(--font-heading);
+            color: var(--accent-secondary);
+            opacity: 0.8;
+            -webkit-text-stroke: 1.5px #1a1a1a;
+            font-size: 3.5rem;
+        }
+
+        [data-theme="comic"] .dna-card h3 {
+            background: none;
+            -webkit-text-fill-color: var(--accent-primary);
+            color: var(--accent-primary);
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        [data-theme="comic"] .about-image-wrapper img {
+            border: var(--border-width) solid #1a1a1a;
+            box-shadow: var(--shadow-comic-lg);
+            border-radius: 20px;
+        }
+
+        [data-theme="comic"] .about-image-wrapper::after {
+            display: none;
+        }
+
+        [data-theme="comic"] .dna-section {
+            background: none;
+        }
+
+        [data-theme="comic"] .about-cta-section {
+            background: #ffe600 !important;
+            border: var(--border-width) solid #1a1a1a !important;
+            box-shadow: var(--shadow-comic-lg) !important;
+            border-radius: 16px !important;
+        }
+
+        [data-theme="comic"] .about-cta-section h2 {
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            color: #1a1a1a !important;
+        }
+
+        [data-theme="comic"] .about-cta-section p {
+            color: #333 !important;
+        }
     </style>
     <link rel="canonical" href="https://epoqzero.com/about">
     <meta property="og:url" content="https://epoqzero.com/about">
+    <!-- Early theme detection to prevent flash of unstyled content (FOUC) -->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'comic') {
+                document.documentElement.setAttribute('data-theme', 'comic');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
+        })();
+    </script>
   <script type="module" crossorigin src="./assets/main-LXkkl7kA.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/project-style-BjscRWLr.css">
-  <link rel="stylesheet" crossorigin href="./assets/style-BHwlTYY8.css">
+  <script type="module" crossorigin src="./assets/theme-DY8xIrSq.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/project-style-D9-SNwfJ.css">
+  <link rel="stylesheet" crossorigin href="./assets/style-DGuwzlV6.css">
 </head>
 
 <body>
@@ -344,9 +487,19 @@
             <a href="/#testimonials">Testimonials</a>
             <a href="about">About</a>
             <a href="/#contact">Contact</a>
+            <button class="theme-toggle mobile-only">
+                <span class="theme-toggle-icon">🦸</span>
+                <span class="theme-toggle-text">Comic Mode</span>
+            </button>
             <a href="/#contact" class="btn-primary mobile-only">Get in Touch</a>
         </div>
-        <a href="/#contact" class="btn-primary desktop-only">Get in Touch</a>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <button class="theme-toggle desktop-only">
+                <span class="theme-toggle-icon">🦸</span>
+                <span class="theme-toggle-text">Comic Mode</span>
+            </button>
+            <a href="/#contact" class="btn-primary desktop-only">Get in Touch</a>
+        </div>
         <button class="hamburger" id="hamburger-menu">
             <span></span>
             <span></span>
@@ -378,7 +531,8 @@
                 </p>
             </div>
             <div class="about-image-wrapper">
-                <img src="./assets/about_hero_v2.png" alt="Epoq Zero Collaboration">
+                <img src="./assets/about_hero_v2.png" alt="Epoq Zero Collaboration" class="standard-visual">
+                <img src="./assets/about_hero_comic.png" alt="Epoq Zero Comic Collaboration" class="comic-visual">
             </div>
         </div>
     </section>
@@ -476,7 +630,7 @@
         </div>
     </section> -->
 
-    <section class="about-section"
+    <section class="about-section about-cta-section"
         style="background: var(--glass-bg); margin: 60px 5%; border-radius: 40px; text-align: center;">
         <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Ready to build something great?</h2>
         <p style="color: var(--text-secondary); margin-bottom: 40px; font-size: 1.1rem;">Join the growing list of
@@ -531,7 +685,7 @@
             </div>
         </div>
     </footer>
-
+
 </body>
 
 </html>

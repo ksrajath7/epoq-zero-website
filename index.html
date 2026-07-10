@@ -33,8 +33,20 @@
       "description": "Epoq Zero LLP is a leading custom software development firm, specializing in custom SaaS products, mobile applications, and high-fidelity digital solutions."
     }
     </script>
+    <!-- Early theme detection to prevent flash of unstyled content (FOUC) -->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'comic') {
+                document.documentElement.setAttribute('data-theme', 'comic');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
+        })();
+    </script>
   <script type="module" crossorigin src="./assets/main-LXkkl7kA.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/style-BHwlTYY8.css">
+  <script type="module" crossorigin src="./assets/theme-DY8xIrSq.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/style-DGuwzlV6.css">
 </head>
 
 <body>
@@ -49,9 +61,19 @@
             <a href="#testimonials">Testimonials</a>
             <a href="about">About</a>
             <a href="#contact">Contact</a>
+            <button class="theme-toggle mobile-only">
+                <span class="theme-toggle-icon">🦸</span>
+                <span class="theme-toggle-text">Comic Mode</span>
+            </button>
             <a href="#contact" class="btn-primary mobile-only">Get in Touch</a>
         </div>
-        <a href="#contact" class="btn-primary desktop-only">Get in Touch</a>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <button class="theme-toggle desktop-only">
+                <span class="theme-toggle-icon">🦸</span>
+                <span class="theme-toggle-text">Comic Mode</span>
+            </button>
+            <a href="#contact" class="btn-primary desktop-only">Get in Touch</a>
+        </div>
         <button class="hamburger" id="hamburger-menu">
             <span></span>
             <span></span>
@@ -71,7 +93,8 @@
             </div>
         </div>
         <div class="hero-visual-container-main">
-            <img src="./assets/epoq_hero_natural-t6INqqg9.png" alt="Epoq Zero Premium Software Visual" class="hero-visual-main">
+            <img src="./assets/epoq_hero_natural-t6INqqg9.png" alt="Epoq Zero Premium Software Visual" class="hero-visual-main standard-visual">
+            <img src="./assets/epoq_hero_comic-mR2jlqE2.png" alt="Epoq Zero Comic Software Visual" class="hero-visual-main comic-visual">
             <div class="glow-orb-main"></div>
         </div>
     </header>
