@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
     <link rel="manifest" href="./site.webmanifest">
     <meta name="theme-color" content="#012B30">
-    <meta name="google-site-verification" content="googlecd1621415d1c57c7" />
+    <meta name="google-site-verification" content="googlecd1621415d1c57c7" />
     <link rel="canonical" href="https://epoqzero.com/">
     <meta property="og:url" content="https://epoqzero.com/">
 
@@ -37,16 +37,16 @@
     <script>
         (function () {
             const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'comic') {
-                document.documentElement.setAttribute('data-theme', 'comic');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
             } else {
                 document.documentElement.removeAttribute('data-theme');
             }
         })();
     </script>
   <script type="module" crossorigin src="./assets/main-Bm_P-fWN.js"></script>
-  <script type="module" crossorigin src="./assets/theme-C7OeTExF.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/style-CjGo5qEj.css">
+  <script type="module" crossorigin src="./assets/theme-CijE1aNs.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/style-D4LI2XDQ.css">
 </head>
 
 <body>
@@ -97,6 +97,8 @@
                 class="hero-visual-main standard-visual">
             <img src="./assets/epoq_hero_comic-mR2jlqE2.png" alt="Epoq Zero Comic Software Visual"
                 class="hero-visual-main comic-visual">
+            <img src="./assets/epoq_hero_lego-ClXkYnnw.png" alt="Epoq Zero Lego Software Visual"
+                class="hero-visual-main lego-visual">
             <div class="glow-orb-main"></div>
         </div>
     </header>
@@ -641,7 +643,7 @@
             </div>
         </div>
     </footer>
-
+
 </body>
 
 </html>

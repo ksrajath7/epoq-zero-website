@@ -469,6 +469,66 @@
         [data-theme="comic"] .about-cta-section p {
             color: #333 !important;
         }
+
+        /* ─── Lego Theme Overrides for About Page ─── */
+        [data-theme="lego"] .about-page-hero {
+            background: var(--bg-color);
+            border-bottom: var(--section-side-border);
+        }
+
+        [data-theme="lego"] .hero-title {
+            color: var(--text-primary);
+            -webkit-text-fill-color: var(--text-primary);
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            background: none;
+        }
+
+        [data-theme="lego"] .section-tag {
+            background: #ffcd03 !important;
+            color: #1b1c1e !important;
+            border: 3px solid #1b1c1e !important;
+            box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.5), 3px 3px 0 #1b1c1e !important;
+            font-family: var(--font-heading) !important;
+            opacity: 1 !important;
+            text-shadow: none !important;
+            font-weight: 700 !important;
+            border-radius: 8px !important;
+        }
+
+        [data-theme="lego"] .section-title {
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            color: var(--text-primary);
+        }
+
+        [data-theme="lego"] .mission-box,
+        [data-theme="lego"] .process-card,
+        [data-theme="lego"] .dna-card {
+            background: #ffffff;
+            border: 3.5px solid #1b1c1e !important;
+            box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.6), 5px 5px 0px #1b1c1e !important;
+            border-radius: 16px !important;
+        }
+
+        [data-theme="lego"] .about-cta-section {
+            background: #ffcd03 !important;
+            border: 3.5px solid #1b1c1e !important;
+            box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.5), 6px 6px 0px #1b1c1e !important;
+            border-radius: 16px !important;
+        }
+
+        [data-theme="lego"] .about-cta-section h2 {
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            color: #1b1c1e !important;
+        }
+
+        [data-theme="lego"] .about-cta-section p {
+            color: #4b4f56 !important;
+        }
     </style>
     <link rel="canonical" href="https://epoqzero.com/about">
     <meta property="og:url" content="https://epoqzero.com/about">
@@ -476,17 +536,17 @@
     <script>
         (function () {
             const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'comic') {
-                document.documentElement.setAttribute('data-theme', 'comic');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
             } else {
                 document.documentElement.removeAttribute('data-theme');
             }
         })();
     </script>
   <script type="module" crossorigin src="./assets/main-Bm_P-fWN.js"></script>
-  <script type="module" crossorigin src="./assets/theme-C7OeTExF.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/project-style-ml6V7fcQ.css">
-  <link rel="stylesheet" crossorigin href="./assets/style-CjGo5qEj.css">
+  <script type="module" crossorigin src="./assets/theme-CijE1aNs.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/project-style-TEpiQde3.css">
+  <link rel="stylesheet" crossorigin href="./assets/style-D4LI2XDQ.css">
 </head>
 
 <body>
@@ -547,6 +607,7 @@
             <div class="about-image-wrapper">
                 <img src="./assets/about_hero_v2.png" alt="Epoq Zero Collaboration" class="standard-visual">
                 <img src="./assets/about_hero_comic.png" alt="Epoq Zero Comic Collaboration" class="comic-visual">
+                <img src="./assets/about_hero_lego-DAB18KzG.png" alt="Epoq Zero Lego Collaboration" class="lego-visual">
             </div>
         </div>
     </section>
