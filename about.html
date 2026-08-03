@@ -531,102 +531,176 @@
             line-height: 1.8;
         }
 
-        /* ─── Comic Theme Overrides ─── */
+        /* ─── Comprehensive Comic Theme Overrides for About Page ─── */
+        [data-theme="comic"] body {
+            background: #fdf5e4 !important;
+            color: #1a1a1a !important;
+        }
+
+        [data-theme="comic"] .about-page-hero,
+        [data-theme="comic"] .about-section,
+        [data-theme="comic"] .tradeoff-section,
+        [data-theme="comic"] .problem-section,
+        [data-theme="comic"] .dna-section {
+            background: #fdf5e4 !important;
+            background-image: radial-gradient(circle, rgba(26, 26, 26, 0.12) 1.5px, transparent 1.5px) !important;
+            background-size: 28px 28px !important;
+            color: #1a1a1a !important;
+        }
+
         [data-theme="comic"] .about-page-hero {
-            background: #fdf5e4;
-            background-image: radial-gradient(circle, rgba(26, 26, 26, 0.12) 1.5px, transparent 1.5px);
-            background-size: 28px 28px;
             border-bottom: 3px solid #1a1a1a;
-        }
-
-        [data-theme="comic"] .hero-title {
-            color: #1a1a1a;
-            -webkit-text-fill-color: #1a1a1a;
-            font-family: var(--font-heading);
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            background: none;
-            text-shadow: 4px 4px 0px #ffe600, 7px 7px 0px #1a1a1a;
-        }
-
-        [data-theme="comic"] .hero-subtitle {
-            color: #333333;
-            font-weight: 700;
         }
 
         [data-theme="comic"] .tradeoff-section,
         [data-theme="comic"] .problem-section {
-            background: #fdf5e4;
-            background-image: radial-gradient(circle, rgba(26, 26, 26, 0.12) 1.5px, transparent 1.5px);
-            background-size: 28px 28px;
             border-top: 3px solid #1a1a1a;
             border-bottom: 3px solid #1a1a1a;
         }
 
-        [data-theme="comic"] .tradeoff-tag {
-            color: #e63946;
+        /* Headings & Text */
+        [data-theme="comic"] .hero-title {
+            color: #1a1a1a !important;
+            -webkit-text-fill-color: #1a1a1a !important;
             font-family: var(--font-heading);
-            font-size: 1.1rem;
             text-transform: uppercase;
+            letter-spacing: 0.04em;
+            background: none !important;
+            text-shadow: 4px 4px 0px #ffe600, 7px 7px 0px #1a1a1a;
         }
 
+        [data-theme="comic"] .hero-subtitle,
+        [data-theme="comic"] .about-lead,
+        [data-theme="comic"] .about-subtext,
+        [data-theme="comic"] .tradeoff-text {
+            color: #1a1a1a !important;
+            font-weight: 700 !important;
+        }
+
+        [data-theme="comic"] .section-title,
         [data-theme="comic"] .tradeoff-title,
         [data-theme="comic"] .problem-section h2 {
-            font-family: var(--font-heading);
+            font-family: var(--font-heading) !important;
             color: #1a1a1a !important;
+            -webkit-text-fill-color: #1a1a1a !important;
             text-transform: uppercase;
             letter-spacing: 0.04em;
             text-shadow: 3px 3px 0px #ffe600, 5px 5px 0px #1a1a1a;
             font-weight: 100 !important;
+            background: none !important;
         }
 
-        [data-theme="comic"] .tradeoff-title::after {
-            background: #1a1a1a;
-            height: 4px;
-            box-shadow: 2px 2px 0px #ffe600;
-        }
-
-        [data-theme="comic"] .tradeoff-text {
-            color: #1a1a1a;
-            font-weight: 700;
+        [data-theme="comic"] .section-tag,
+        [data-theme="comic"] .tradeoff-tag {
+            background: #ffe600 !important;
+            color: #1a1a1a !important;
+            border: 2.5px solid #1a1a1a !important;
+            box-shadow: 3px 3px 0px #1a1a1a !important;
+            border-radius: 100px !important;
+            padding: 6px 20px !important;
+            font-family: var(--font-heading) !important;
+            font-size: 1rem !important;
+            text-transform: uppercase;
+            font-weight: 100 !important;
+            opacity: 1 !important;
+            display: inline-block !important;
+            margin-bottom: 20px !important;
         }
 
         [data-theme="comic"] .yellow-badge {
-            background: #ffe600;
-            color: #1a1a1a;
-            border: 3px solid #1a1a1a;
-            box-shadow: 4px 4px 0px #1a1a1a;
-            border-radius: 8px;
-            font-family: var(--font-heading);
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            font-weight: 100 !important;
-        }
-
-        [data-theme="comic"] .problem-card {
-            background: #ffffff;
+            background: #ffe600 !important;
+            color: #1a1a1a !important;
             border: 3.5px solid #1a1a1a !important;
-            box-shadow: 6px 6px 0px #1a1a1a;
-            border-radius: 14px;
-            border-top: 3.5px solid #1a1a1a !important;
-        }
-
-        [data-theme="comic"] .problem-card:hover {
-            transform: translate(-4px, -4px);
-            box-shadow: 10px 10px 0px #1a1a1a;
-        }
-
-        [data-theme="comic"] .problem-card h3 {
-            font-family: var(--font-heading);
+            box-shadow: 4px 4px 0px #1a1a1a !important;
+            border-radius: 12px;
+            font-family: var(--font-heading) !important;
+            font-size: inherit;
             text-transform: uppercase;
-            color: #1a1a1a;
-            font-size: 1.5rem;
+            text-shadow: none !important;
+            padding: 4px 18px;
+            margin-left: 6px;
+            display: inline-block;
+            vertical-align: middle;
             font-weight: 100 !important;
         }
 
-        [data-theme="comic"] .problem-card p {
-            color: #444444;
-            font-weight: 700;
+        /* Cards in Comic Mode */
+        [data-theme="comic"] .problem-card,
+        [data-theme="comic"] .process-card,
+        [data-theme="comic"] .dna-card {
+            background: #ffffff !important;
+            border: 3.5px solid #1a1a1a !important;
+            box-shadow: 6px 6px 0px #1a1a1a !important;
+            border-radius: 16px !important;
+        }
+
+        [data-theme="comic"] .problem-card:hover,
+        [data-theme="comic"] .process-card:hover,
+        [data-theme="comic"] .dna-card:hover {
+            transform: translate(-4px, -4px) !important;
+            box-shadow: 10px 10px 0px #1a1a1a !important;
+            background: #ffffff !important;
+        }
+
+        [data-theme="comic"] .problem-card h3,
+        [data-theme="comic"] .process-card h3,
+        [data-theme="comic"] .dna-card h3 {
+            font-family: var(--font-heading) !important;
+            text-transform: uppercase;
+            color: #1a1a1a !important;
+            -webkit-text-fill-color: #1a1a1a !important;
+            font-size: 1.6rem !important;
+            font-weight: 100 !important;
+            background: none !important;
+        }
+
+        [data-theme="comic"] .problem-card p,
+        [data-theme="comic"] .process-card p,
+        [data-theme="comic"] .dna-card p,
+        [data-theme="comic"] .dna-section p {
+            color: #333333 !important;
+            font-weight: 700 !important;
+        }
+
+        [data-theme="comic"] .process-number {
+            font-family: var(--font-heading) !important;
+            color: #e63946 !important;
+            opacity: 0.85 !important;
+            -webkit-text-stroke: 1.5px #1a1a1a;
+            font-size: 3.8rem !important;
+        }
+
+        /* CTA Section in Comic Mode */
+        [data-theme="comic"] .about-cta-section {
+            background: #ffe600 !important;
+            border: 3.5px solid #1a1a1a !important;
+            box-shadow: 8px 8px 0px #1a1a1a !important;
+            border-radius: 20px !important;
+        }
+
+        [data-theme="comic"] .about-cta-section h2 {
+            font-family: var(--font-heading) !important;
+            text-transform: uppercase;
+            color: #1a1a1a !important;
+            -webkit-text-fill-color: #1a1a1a !important;
+            font-weight: 100 !important;
+        }
+
+        [data-theme="comic"] .about-cta-section p {
+            color: #1a1a1a !important;
+            font-weight: 700 !important;
+        }
+
+        [data-theme="comic"] .about-cta-section .btn-primary {
+            background: #1a1a1a !important;
+            color: #ffffff !important;
+            border: 3px solid #1a1a1a !important;
+            box-shadow: 4px 4px 0px #ffffff !important;
+        }
+
+        [data-theme="comic"] .about-cta-section .btn-primary:hover {
+            background: #e63946 !important;
+            box-shadow: 6px 6px 0px #1a1a1a !important;
         }
 
         @media (max-width: 1024px) {
@@ -730,7 +804,7 @@
     <!-- 2. Founder's Tradeoff Light Section -->
     <section class="tradeoff-section">
         <div class="tradeoff-container">
-            <span class="tradeoff-tag">WHY FOUNDERS CHOOSE EPOQ ZERO</span>
+            <div class="section-tag">WHY FOUNDERS CHOOSE EPOQ ZERO</div>
             <h2 class="tradeoff-title">Focus on growing your business,<br>we'll handle the software</h2>
             <p class="tradeoff-text">
                 Every hour spent wrestling with complex technical debt or managing unreliable dev teams is an hour away
@@ -743,7 +817,7 @@
     <!-- 3. NEW layout section 1: 4-Card Problem Grid (Dark Oceanic Background) -->
     <section class="problem-section">
         <div style="max-width: 1350px; margin: 0 auto;">
-            <span class="tradeoff-tag" style="color: #38bdf8;">COMMON SOFTWARE CHALLENGES</span>
+            <div class="section-tag">COMMON SOFTWARE CHALLENGES</div>
             <h2
                 style="font-size: clamp(2.4rem, 4.5vw, 3.4rem); font-weight: 800; color: #ffffff; line-height: 1.2; margin-top: 10px;">
                 Why do custom software projects <span class="yellow-badge">get stuck?</span>
