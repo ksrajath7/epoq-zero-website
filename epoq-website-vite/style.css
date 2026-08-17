@@ -1626,6 +1626,16 @@ nav.scrolled {
   margin-bottom: 20px;
 }
 
+.portfolio .section-header::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: var(--accent-primary);
+  border-radius: 4px;
+  margin: 16px auto 0;
+}
+
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

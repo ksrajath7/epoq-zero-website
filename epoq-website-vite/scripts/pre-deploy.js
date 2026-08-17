@@ -59,12 +59,16 @@ async function predeploy() {
             }
 
             if (currentBranch === 'master') {
-                console.log('ℹ️ Already on master branch. Git add & commit completed (no push).');
+                console.log('ℹ️ Already on master branch. Git add & commit completed (use "npm run deploy" to push master).');
             } else {
+                console.log(`🚀 Pushing branch '${currentBranch}' to remote origin...`);
+                execSync(`git push origin ${currentBranch}`, { stdio: 'inherit', cwd: REPO_ROOT });
+                console.log(`✅ Pushed '${currentBranch}' to remote.`);
+
                 console.log(`🔀 Merging '${currentBranch}' into master...`);
                 execSync('git checkout master', { stdio: 'inherit', cwd: REPO_ROOT });
                 execSync(`git merge ${currentBranch}`, { stdio: 'inherit', cwd: REPO_ROOT });
-                console.log(`✅ Successfully merged '${currentBranch}' into master.`);
+                console.log(`✅ Successfully merged '${currentBranch}' into master locally.`);
                 execSync(`git checkout ${currentBranch}`, { stdio: 'inherit', cwd: REPO_ROOT });
                 console.log(`🔄 Switched back to '${currentBranch}'.`);
             }
