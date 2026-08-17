@@ -9,6 +9,7 @@
     "canonicals": "node scripts/inject-canonicals.js",
     "build": "npm run sitemap && npm run canonicals && vite build",
     "preview": "vite preview",
+    "pre-deploy": "node scripts/pre-deploy.js",
     "deploy": "node scripts/deploy.js"
   },
   "devDependencies": {
