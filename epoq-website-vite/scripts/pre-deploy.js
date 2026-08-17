@@ -58,20 +58,28 @@ async function predeploy() {
                 console.log('ℹ️ No changes detected to commit (working tree clean).');
             }
 
-            if (currentBranch === 'master') {
-                console.log('ℹ️ Already on master branch. Git add & commit completed (use "npm run deploy" to push master).');
-            } else {
+            // Push current branch to remote if it's not master
+            if (currentBranch !== 'master') {
                 console.log(`🚀 Pushing branch '${currentBranch}' to remote origin...`);
                 execSync(`git push origin ${currentBranch}`, { stdio: 'inherit', cwd: REPO_ROOT });
                 console.log(`✅ Pushed '${currentBranch}' to remote.`);
-
-                console.log(`🔀 Merging '${currentBranch}' into master...`);
-                execSync('git checkout master', { stdio: 'inherit', cwd: REPO_ROOT });
-                execSync(`git merge ${currentBranch}`, { stdio: 'inherit', cwd: REPO_ROOT });
-                console.log(`✅ Successfully merged '${currentBranch}' into master locally.`);
-                execSync(`git checkout ${currentBranch}`, { stdio: 'inherit', cwd: REPO_ROOT });
-                console.log(`🔄 Switched back to '${currentBranch}'.`);
             }
+
+            // Merge changes into both master and deploy branches
+            const targetBranches = ['master', 'deploy'];
+            for (const targetBranch of targetBranches) {
+                if (currentBranch !== targetBranch) {
+                    console.log(`🔀 Merging '${currentBranch}' into ${targetBranch}...`);
+                    execSync(`git checkout ${targetBranch}`, { stdio: 'inherit', cwd: REPO_ROOT });
+                    execSync(`git merge ${currentBranch}`, { stdio: 'inherit', cwd: REPO_ROOT });
+                    console.log(`✅ Successfully merged '${currentBranch}' into ${targetBranch} locally.`);
+                }
+            }
+
+            // Return to original starting branch
+            execSync(`git checkout ${currentBranch}`, { stdio: 'inherit', cwd: REPO_ROOT });
+            console.log(`🔄 Switched back to '${currentBranch}'.`);
+
         } catch (gitErr) {
             console.warn('⚠️ Git operations warning:', gitErr.message);
         }

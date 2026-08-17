@@ -10,7 +10,13 @@ async function deploy() {
     try {
         console.log('🚀 Pushing master branch to origin...');
         execSync('git push origin master', { stdio: 'inherit', cwd: REPO_ROOT });
-        console.log('🎉 Successfully deployed to master branch!');
+        console.log('✅ Pushed master branch to origin.');
+
+        console.log('🚀 Pushing deploy branch to origin...');
+        execSync('git push origin deploy', { stdio: 'inherit', cwd: REPO_ROOT });
+        console.log('✅ Pushed deploy branch to origin.');
+
+        console.log('🎉 Successfully deployed changes to both master and deploy branches!');
     } catch (error) {
         console.error('❌ Deployment push failed:', error.message);
         process.exit(1);
