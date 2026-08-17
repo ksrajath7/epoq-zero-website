@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-# Sitemap link for search engines
-Sitemap: https://epoqzero.com/sitemap.xml
