@@ -1,0 +1,745 @@
+@import url('../style.css');
+
+.project-hero {
+    position: relative;
+    padding: 140px 8% 80px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+    overflow: hidden;
+    background: #050505;
+    border-bottom: var(--section-side-border);
+}
+
+[data-theme="comic"] .project-hero {
+    background:
+        radial-gradient(circle, rgba(26, 26, 26, 0.1) 1.5px, transparent 1.5px) 0 0 / 28px 28px,
+        var(--bg-color);
+}
+
+[data-theme="minecraft"] .project-hero {
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.03) 2px, transparent 2px) 0 0 / 32px 32px,
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 2px, transparent 2px) 0 0 / 32px 32px,
+        var(--bg-color);
+}
+
+[data-theme="arcade"] .project-hero {
+    background:
+        repeating-linear-gradient(0deg, rgba(15, 56, 15, 0.4) 0px, rgba(15, 56, 15, 0.4) 2px, transparent 2px, transparent 4px),
+        linear-gradient(90deg, rgba(139, 172, 15, 0.05) 1px, transparent 1px),
+        var(--bg-color);
+}
+
+[data-theme="lego"] .project-hero {
+    background-color: #16181f;
+    background-image: 
+        radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.45) 30%, transparent 36%),
+        linear-gradient(rgba(0, 0, 0, 0.25) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.25) 1px, transparent 1px);
+    background-size: 32px 32px, 64px 32px, 64px 32px;
+}
+
+.project-hero::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(230, 57, 70, 0.08) 0%, transparent 70%);
+    filter: blur(50px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.hero-content {
+    text-align: left;
+}
+
+.project-hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: 24px;
+    line-height: 1.05;
+    font-weight: 800;
+    color: #fff;
+    font-family: var(--font-title);
+}
+
+[data-theme="comic"] .project-hero h1 {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-family: var(--font-heading);
+    -webkit-text-stroke: 2px #1a1a1a;
+    paint-order: stroke fill;
+    text-shadow: 4px 4px 0px #ffe600, 7px 7px 0px #1a1a1a;
+}
+
+[data-theme="minecraft"] .project-hero h1 {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-family: 'Press Start 2P', monospace;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    text-shadow: 3px 3px 0px #000000;
+}
+
+[data-theme="arcade"] .project-hero h1 {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-family: 'Press Start 2P', monospace;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    text-shadow: 3px 3px 0px #051a05;
+    color: #9bbc0f;
+}
+
+[data-theme="lego"] .project-hero h1 {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-family: 'Fredoka', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #1b1c1e;
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.project-meta span {
+    padding: 6px 16px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 100px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+[data-theme="comic"] .project-meta span {
+    background: #fff;
+    border: var(--border-width) solid #1a1a1a;
+    border-radius: 6px;
+    font-weight: 700;
+    color: var(--text-primary);
+    box-shadow: 2px 2px 0px #1a1a1a;
+    font-family: var(--font-body);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+[data-theme="minecraft"] .project-meta span {
+    background: #2b231d;
+    border: 3px solid #5c4033;
+    border-radius: 0px;
+    font-weight: normal;
+    color: #55ffff;
+    box-shadow: inset -2px -2px 0px #1c130d, inset 2px 2px 0px #8b6247, 3px 3px 0px #000000;
+    font-family: 'Silkscreen', monospace;
+    text-transform: uppercase;
+}
+
+[data-theme="arcade"] .project-meta span {
+    background: #1e421e;
+    border: 3px solid #8bac0f;
+    border-radius: 0px;
+    font-weight: normal;
+    color: #9bbc0f;
+    box-shadow: inset -2px -2px 0px #051a05, inset 2px 2px 0px #9bbc0f, 3px 3px 0px #051a05;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+}
+
+[data-theme="lego"] .project-meta span {
+    background: #ffcd03;
+    border: 3px solid #1b1c1e;
+    border-radius: 8px;
+    font-weight: 700;
+    color: #1b1c1e;
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.5), 3px 3px 0px #1b1c1e;
+    font-family: 'Fredoka', sans-serif;
+    text-transform: uppercase;
+}
+
+.project-meta span:nth-child(even) {
+    display: none;
+    /* Hide the bullets */
+}
+
+.main-image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.15s ease;
+}
+
+[data-theme="comic"] .main-image {
+    border: var(--border-width) solid #1a1a1a;
+    box-shadow: var(--shadow-comic-lg);
+    transform: perspective(1000px) rotateY(-3deg);
+}
+
+[data-theme="comic"] .main-image:hover {
+    transform: perspective(1000px) rotateY(0deg) translate(-4px, -4px);
+    box-shadow: 12px 12px 0px #1a1a1a;
+}
+
+[data-theme="minecraft"] .main-image {
+    border: 4px solid #5c4033;
+    border-radius: 0px;
+    box-shadow: inset -4px -4px 0px #1c130d, inset 4px 4px 0px #8b6247, 6px 6px 0px #000000;
+    transform: none;
+}
+
+[data-theme="arcade"] .main-image {
+    border: 4px solid #8bac0f;
+    border-radius: 0px;
+    box-shadow: inset -4px -4px 0px #051a05, inset 4px 4px 0px #9bbc0f, 6px 6px 0px #051a05;
+    transform: none;
+}
+
+[data-theme="lego"] .main-image {
+    border: 3.5px solid #1b1c1e;
+    border-radius: 16px;
+    box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.5), inset 0 -3px 0 rgba(0, 0, 0, 0.2), 8px 8px 0px #1b1c1e;
+    transform: none;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 8% 100px;
+}
+
+.project-content h2 {
+    margin-bottom: 24px;
+    font-size: 2rem;
+}
+
+[data-theme="comic"] .project-content h2 {
+    margin-bottom: 24px;
+    font-size: 2rem;
+    font-weight: 200 !important;
+}
+
+[data-theme="minecraft"] .project-content h2 {
+    margin-bottom: 24px;
+    font-size: 1.5rem;
+    font-family: 'Press Start 2P', monospace;
+    text-shadow: 2px 2px 0px #000000;
+}
+
+[data-theme="arcade"] .project-content h2 {
+    margin-bottom: 24px;
+    font-size: 1.5rem;
+    font-family: 'Press Start 2P', monospace;
+    text-shadow: 2px 2px 0px #051a05;
+    color: #9bbc0f;
+}
+
+[data-theme="lego"] .project-content h2 {
+    margin-bottom: 24px;
+    font-size: 1.8rem;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 800;
+    color: #ffcd03;
+    text-shadow: 2px 2px 0 #000000;
+}
+
+[data-theme="lego"] .project-content p {
+    color: #ffffff !important;
+    background: #232630;
+    border: 3.5px solid #000000;
+    border-radius: 14px;
+    padding: 24px 30px;
+    box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.12), 5px 5px 0px #000000;
+    line-height: 1.8;
+}
+
+.project-content .gallery-item {
+    margin: 60px 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 80px 0;
+}
+
+.gallery-item {
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    border: 1px solid var(--glass-border);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+[data-theme="comic"] .gallery-item {
+    border: var(--border-width) solid #1a1a1a;
+    box-shadow: var(--shadow-comic);
+}
+
+[data-theme="comic"] .gallery-item:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 8px 8px 0px #1a1a1a;
+}
+
+[data-theme="minecraft"] .gallery-item {
+    border: 4px solid #5c4033;
+    border-radius: 0px;
+    box-shadow: 4px 4px 0px #000000;
+}
+
+[data-theme="minecraft"] .gallery-item:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #000000;
+}
+
+[data-theme="arcade"] .gallery-item {
+    border: 4px solid #8bac0f;
+    border-radius: 0px;
+    box-shadow: 4px 4px 0px #051a05;
+}
+
+[data-theme="arcade"] .gallery-item:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #051a05;
+}
+
+[data-theme="lego"] .gallery-item {
+    border: 3.5px solid #1b1c1e;
+    border-radius: 12px;
+    box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.5), 4px 4px 0px #1b1c1e;
+}
+
+[data-theme="lego"] .gallery-item:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.5), 6px 6px 0px #1b1c1e;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.links-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 90px;
+    z-index: 900;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    margin: 30px auto 60px;
+    width: fit-content;
+    transition: all 0.15s ease;
+}
+
+.links-section:not(:has(a)) {
+    display: none;
+}
+
+[data-theme="comic"] .links-section {
+    background: var(--accent-secondary);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-radius: 12px;
+    border: var(--border-width) solid #1a1a1a;
+    box-shadow: var(--shadow-comic);
+}
+
+[data-theme="comic"] .links-section:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: var(--shadow-comic-lg);
+}
+
+
+.like-count {
+    font-variant-numeric: tabular-nums;
+}
+
+.link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border-radius: 100px;
+    background: var(--accent-primary);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.15s ease;
+}
+
+.link-btn:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.1);
+}
+
+[data-theme="comic"] .link-btn {
+    border-radius: 8px;
+    background: #fff;
+    border: var(--border-width) solid #1a1a1a;
+    font-weight: 100;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+    box-shadow: 3px 3px 0 #1a1a1a;
+}
+
+[data-theme="comic"] .link-btn:hover {
+    background: var(--accent-primary);
+    border-color: #1a1a1a;
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 #1a1a1a;
+    color: white;
+    filter: none;
+}
+
+.link-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+@media (max-width: 768px) {
+    .links-section {
+        top: 80px;
+        padding: 8px 15px;
+        gap: 10px;
+        width: 90%;
+        border-radius: 20px;
+    }
+
+    .project-likes,
+    .link-btn {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 968px) {
+    .project-hero {
+        grid-template-columns: 1fr;
+        padding-top: 140px;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .project-meta {
+        justify-content: center;
+    }
+
+    .main-image {
+        transform: none;
+    }
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    margin: 60px 0;
+    border: 1px solid var(--glass-border);
+}
+
+[data-theme="comic"] .video-wrapper {
+    border: var(--border-width) solid #1a1a1a;
+    box-shadow: var(--shadow-comic);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+strong {
+    font-weight: 700;
+    color: var(--accent-primary);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin: 80px 0;
+}
+
+@media (min-width: 1200px) {
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature-grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.feature-card {
+    padding: 50px;
+    border-radius: 16px;
+    background: var(--card-bg);
+    border: var(--card-border);
+    transition: all 0.15s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+[data-theme="comic"] .feature-card {
+    background: #fff;
+    box-shadow: var(--shadow-comic);
+}
+
+.feature-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 9px 9px 0px #1a1a1a;
+    border-color: var(--accent-primary);
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--accent-primary);
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.demo-cta {
+    text-align: center;
+    padding: 80px 40px;
+    background: var(--accent-secondary);
+    border-radius: 16px;
+    border: var(--border-width) solid #1a1a1a;
+    box-shadow: var(--shadow-comic-lg);
+    margin-top: 80px;
+}
+
+/* Typing Animation & Hero Features */
+.typing-header {
+    line-height: 1.2 !important;
+}
+
+.typing-text {
+    color: #10b981;
+    /* Success green like in the image */
+}
+
+.cursor {
+    display: inline-block;
+    width: 3px;
+    background-color: var(--accent-primary);
+    margin-left: 5px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.hero-feature-list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hero-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+.hero-feature-item svg {
+    width: 20px;
+    height: 20px;
+    color: var(--accent-primary);
+}
+
+.demo-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.demo-cta p {
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.side-by-side {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.side-by-side .gallery-item {
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .side-by-side {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .side-by-side.reversed .story-text {
+        order: 2;
+    }
+
+    .side-by-side.reversed .gallery-item {
+        order: 1;
+    }
+}
+
+/* Pricing Section */
+.pricing-section {
+    padding: 100px 0;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+@media (min-width: 1200px) {
+    .pricing-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.pricing-card {
+    padding: 60px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border: var(--border-width) solid #1a1a1a;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: var(--shadow-comic);
+    transition: all 0.15s ease;
+}
+
+.pricing-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 9px 9px 0px #1a1a1a;
+}
+
+.pricing-card.featured {
+    border-color: var(--accent-primary);
+    background: var(--accent-primary);
+    color: #fff;
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.popular-tag {
+    position: absolute;
+    top: -15px;
+    background: var(--accent-primary);
+    color: white;
+    padding: 4px 16px;
+    border-radius: 6px;
+    border: var(--border-width) solid #1a1a1a;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    box-shadow: 2px 2px 0px #1a1a1a;
+}
+
+.plan-duration {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.billing-cycle {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.price {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+    font-family: var(--font-heading);
+}
+
+.currency {
+    font-size: 1.5rem;
+    vertical-align: super;
+    margin-right: 5px;
+}
+
+.price-meta {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+}
+
+.pricing-card .btn-primary,
+.pricing-card .btn-secondary {
+    width: 100%;
+}
