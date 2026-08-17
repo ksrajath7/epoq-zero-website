@@ -40,16 +40,26 @@ async function deploy() {
         console.log(`📦 Copying files from ${DIST_DIR} to ${TARGET_DIR}`);
         copyRecursiveSync(DIST_DIR, TARGET_DIR);
 
-        console.log('🐙 Performing git add, commit, and push in repository...');
+        console.log('🐙 Checking for repository changes and syncing...');
         try {
             execSync('git add .', { stdio: 'inherit', cwd: REPO_ROOT });
-            const commitMessage = generateCommitMessage(REPO_ROOT);
-            const safeMessage = commitMessage.replace(/"/g, "'");
-            console.log(`💬 Generated Commit Message: "${safeMessage}"`);
-            execSync(`git commit -m "${safeMessage}"`, { stdio: 'inherit', cwd: REPO_ROOT });
+            const statusOutput = execSync('git status --porcelain', { cwd: REPO_ROOT, encoding: 'utf8' }).trim();
+
+            if (statusOutput) {
+                const commitMessage = generateCommitMessage(statusOutput);
+                const safeMessage = commitMessage.replace(/"/g, "'");
+                console.log(`💬 Generated Commit Message: "${safeMessage}"`);
+                execSync(`git commit -m "${safeMessage}"`, { stdio: 'inherit', cwd: REPO_ROOT });
+                console.log('✅ Committed changes.');
+            } else {
+                console.log('ℹ️ No changes detected to commit (working tree clean).');
+            }
+
+            console.log('🚀 Pushing to origin master...');
             execSync('git push origin master', { stdio: 'inherit', cwd: REPO_ROOT });
+            console.log('✅ Pushed successfully to origin master.');
         } catch (gitErr) {
-            console.warn('⚠️ Git operations warning (possibly no changes to commit):', gitErr.message);
+            console.warn('⚠️ Git operations warning:', gitErr.message);
         }
 
         console.log('🎉 Deployment sync completed successfully!');
@@ -76,9 +86,8 @@ function copyRecursiveSync(src, dest) {
     }
 }
 
-function generateCommitMessage(repoRoot) {
+function generateCommitMessage(statusOutput) {
     try {
-        const statusOutput = execSync('git status --porcelain', { cwd: repoRoot, encoding: 'utf8' }).trim();
         if (!statusOutput) {
             return 'deploy: clean build update';
         }
