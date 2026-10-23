@@ -35,6 +35,18 @@ function generateSitemap() {
         });
     }
 
+    // 3. Scan epoq-connect directory
+    const epoqConnectDir = path.join(PROJECT_ROOT, 'epoq-connect');
+    if (fs.existsSync(epoqConnectDir)) {
+        const ecFiles = fs.readdirSync(epoqConnectDir);
+        ecFiles.forEach(file => {
+            if (file.endsWith('.html') && !ignoreFiles.includes(file)) {
+                const name = file.replace('.html', '');
+                urls.push(`${DOMAIN}/epoq-connect/${name}`);
+            }
+        });
+    }
+
     // 3. Construct XML
     const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

@@ -106,6 +106,15 @@ function run() {
                 .filter(f => f.endsWith('.html') && !ignoreFiles.includes(f))
                 .map(f => path.join(pDir, f));
         })(),
+
+        // epoq-connect/ HTML files
+        ...(() => {
+            const ecDir = path.join(PROJECT_ROOT, 'epoq-connect');
+            if (!fs.existsSync(ecDir)) return [];
+            return fs.readdirSync(ecDir)
+                .filter(f => f.endsWith('.html') && !ignoreFiles.includes(f))
+                .map(f => path.join(ecDir, f));
+        })(),
     ];
 
     let total = 0;

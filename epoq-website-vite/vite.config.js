@@ -27,9 +27,16 @@ export default defineConfig({
             const pathname = url.pathname;
 
             // Normalize path to check if corresponding HTML file exists on disk
-            let targetFile = pathname;
-            if (!pathname.includes('.') && pathname !== '/') {
-              targetFile = pathname + '.html';
+            let cleanPath = pathname.replace(/\/$/, '');
+            let targetFile = cleanPath;
+            if (!cleanPath.includes('.') && cleanPath !== '') {
+              targetFile = cleanPath + '.html';
+            }
+
+            // Support /projects/epoq-connect/privacy-policy alias
+            if (cleanPath === '/projects/epoq-connect/privacy-policy') {
+              targetFile = '/epoq-connect/privacy-policy.html';
+              cleanPath = '/epoq-connect/privacy-policy';
             }
 
             // If requesting an HTML file (or clean URL that resolves to HTML)
@@ -44,7 +51,7 @@ export default defineConfig({
                 return;
               } else if (!pathname.includes('.') && pathname !== '/') {
                 // Valid clean URL, rewrite internally to direct HTML file
-                req.url = pathname + '.html' + url.search;
+                req.url = targetFile + url.search;
               }
             }
           }
@@ -71,6 +78,7 @@ export default defineConfig({
         'billing-crm-software': resolve(__dirname, 'billing-crm-software.html'),
         'travel-crm-software': resolve(__dirname, 'travel-crm-software.html'),
         ...getHtmlFiles('projects'),
+        'epoq-connect/privacy-policy': resolve(__dirname, 'epoq-connect/privacy-policy.html'),
       },
     },
   },

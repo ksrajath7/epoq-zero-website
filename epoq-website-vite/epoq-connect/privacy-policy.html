@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- Meta Title -->
+    <title>Privacy Policy | Epoq Connect Customizable CRM</title>
+
+    <!-- SEO Meta Description -->
+    <meta name="description"
+        content="Read the Privacy Policy for Epoq Connect by Epoq Zero LLP. Learn about our minimal data collection, data protection practices, tenant isolation, and DPDP / GDPR adherence.">
+
+    <meta name="keywords"
+        content="Epoq Connect Privacy Policy, CRM data privacy, DPDP Act 2023, CRM data security, GDPR compliance CRM, customer data protection, Epoq Zero">
+
+    <!-- OpenGraph Social Metadata -->
+    <meta property="og:title" content="Privacy Policy | Epoq Connect Customizable CRM">
+    <meta property="og:description"
+        content="Transparent data practices, enterprise-grade encryption, and data protection details for Epoq Connect CRM by Epoq Zero LLP.">
+    <meta property="og:image" content="https://epoqzero.com/assets/epoq-connect-og.png">
+    <meta property="og:type" content="website">
+
+    <!-- SEO Canonical URL -->
+    <link rel="canonical" href="https://epoqzero.com/epoq-connect/privacy-policy">
+    <meta property="og:url" content="https://epoqzero.com/epoq-connect/privacy-policy">
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Privacy Policy | Epoq Connect CRM">
+    <meta name="twitter:description"
+        content="Our commitment to data sovereignty, enterprise-grade encryption, and transparent communication handling for modern sales teams.">
+    <meta name="twitter:image" content="https://epoqzero.com/assets/epoq-connect-og.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/projects/epoq-connect.css?v=3">
+
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <!-- Structured Data Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Privacy Policy for Epoq Connect",
+      "url": "https://epoqzero.com/epoq-connect/privacy-policy",
+      "description": "Official Privacy Policy and Data Protection Information for Epoq Connect CRM platform operated by Epoq Zero LLP.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Epoq Zero LLP",
+        "url": "https://epoqzero.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "West Fort",
+          "addressLocality": "Thrissur",
+          "addressRegion": "Kerala",
+          "postalCode": "680004",
+          "addressCountry": "India"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-8606207307",
+          "contactType": "Grievance Officer",
+          "email": "info@epoqzero.com"
+        }
+      }
+    }
+    </script>
+
+    <!-- Early theme detection -->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
+        })();
+    </script>
+
+    <style>
+        /* ==========================================================================
+           Privacy Policy Specific Styles
+           ========================================================================== */
+        nav:not(.nav-saas-container) {
+            position: static !important;
+            background: none !important;
+            border: none !important;
+            box-shadow: none !important;
+            border-radius: 0 !important;
+            padding: 0 !important;
+            width: auto !important;
+            max-width: none !important;
+        }
+
+        .policy-hero {
+            padding: 120px 0 40px;
+            background: linear-gradient(180deg, var(--bg-mint) 0%, var(--bg-primary) 100%);
+            border-bottom: 1px solid var(--border-organic);
+            position: relative;
+        }
+
+        .policy-hero h1 {
+            font-size: clamp(2.2rem, 4vw, 3.2rem);
+            line-height: 1.15;
+            margin-bottom: 0;
+            color: var(--brand-green);
+            letter-spacing: -0.02em;
+        }
+
+
+
+        /* Policy Main Layout */
+        .policy-main-section {
+            padding: 60px 0 100px;
+            background: var(--bg-primary);
+        }
+
+        .policy-grid {
+            display: grid;
+            grid-template-columns: 310px 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        /* Sticky Sidebar TOC */
+        .policy-sidebar {
+            position: sticky;
+            top: 100px;
+            background: #ffffff;
+            border: 1px solid var(--border-organic);
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .toc-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--brand-green);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .toc-filter-box {
+            position: relative;
+            margin-bottom: 16px;
+        }
+
+        .toc-filter-box input {
+            width: 100%;
+            padding: 10px 12px 10px 34px;
+            border-radius: 10px;
+            border: 1px solid var(--border-organic);
+            background: var(--bg-mint);
+            font-size: 0.85rem;
+            color: var(--text-main);
+            outline: none;
+            transition: var(--transition-smooth);
+            font-family: var(--font-body);
+        }
+
+        .toc-filter-box input:focus {
+            border-color: var(--brand-coral);
+            background: #ffffff;
+            box-shadow: 0 0 0 3px rgba(242, 112, 82, 0.15);
+        }
+
+        .toc-filter-icon {
+            position: absolute;
+            left: 11px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.85rem;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .toc-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            max-height: 480px;
+            overflow-y: auto;
+            padding-right: 6px;
+        }
+
+        .toc-list::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .toc-list::-webkit-scrollbar-thumb {
+            background: rgba(1, 43, 48, 0.15);
+            border-radius: 4px;
+        }
+
+        .toc-link {
+            display: block;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.86rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            line-height: 1.4;
+            transition: var(--transition-smooth);
+            border-left: 2px solid transparent;
+        }
+
+        .toc-link:hover {
+            color: var(--brand-coral);
+            background: var(--bg-peach);
+        }
+
+        .toc-link.active {
+            color: var(--brand-coral);
+            background: var(--bg-peach);
+            font-weight: 600;
+            border-left-color: var(--brand-coral);
+        }
+
+        .sidebar-action-box {
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-organic);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn-policy-action {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid var(--border-organic);
+            background: #ffffff;
+            color: var(--brand-green);
+            transition: var(--transition-smooth);
+        }
+
+        .btn-policy-action:hover {
+            border-color: var(--brand-green);
+            background: var(--bg-mint);
+        }
+
+        .sidebar-support-card {
+            background: var(--bg-mint);
+            border-radius: 12px;
+            padding: 14px;
+            font-size: 0.8rem;
+            line-height: 1.5;
+            color: var(--text-secondary);
+        }
+
+        .sidebar-support-card strong {
+            color: var(--brand-green);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        /* Policy Article Content */
+        .policy-article {
+            color: var(--text-main);
+            font-size: 1rem;
+            line-height: 1.75;
+        }
+
+        .policy-section {
+            padding-bottom: 48px;
+            margin-bottom: 48px;
+            border-bottom: 1px solid var(--border-organic);
+            scroll-margin-top: 110px;
+        }
+
+        .policy-section:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .policy-section-num {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--brand-coral);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 6px;
+        }
+
+        .policy-section h2 {
+            font-size: 1.75rem;
+            color: var(--brand-green);
+            margin-bottom: 18px;
+            letter-spacing: -0.01em;
+        }
+
+        .policy-section h3 {
+            font-size: 1.25rem;
+            color: var(--brand-green);
+            margin: 28px 0 12px;
+        }
+
+        .policy-section p {
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+        }
+
+        .policy-section ul,
+        .policy-section ol {
+            margin: 0 0 20px 24px;
+            color: var(--text-secondary);
+        }
+
+        .policy-section li {
+            margin-bottom: 10px;
+            padding-left: 4px;
+        }
+
+        .policy-section strong {
+            color: var(--brand-green);
+        }
+
+        /* Highlight Boxes */
+        .callout-box {
+            padding: 20px 24px;
+            border-radius: 14px;
+            margin: 24px 0;
+            border-left: 4px solid var(--brand-coral);
+            background: var(--bg-peach);
+        }
+
+        .callout-box.green {
+            border-left-color: #059669;
+            background: var(--bg-mint);
+        }
+
+        .callout-box.blue {
+            border-left-color: #2563eb;
+            background: #eff6ff;
+        }
+
+        .callout-box h4 {
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            color: var(--brand-green);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .callout-box p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Tables in Policy */
+        .policy-table-wrapper {
+            overflow-x: auto;
+            margin: 24px 0;
+            border-radius: 12px;
+            border: 1px solid var(--border-organic);
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(1, 43, 48, 0.02);
+        }
+
+        .policy-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        .policy-table th {
+            background: var(--bg-mint);
+            color: var(--brand-green);
+            font-weight: 700;
+            padding: 14px 18px;
+            border-bottom: 1px solid var(--border-organic);
+            white-space: nowrap;
+        }
+
+        .policy-table td {
+            padding: 14px 18px;
+            border-bottom: 1px solid var(--border-organic);
+            color: var(--text-secondary);
+            vertical-align: top;
+            line-height: 1.55;
+        }
+
+        .policy-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .policy-table tr:hover td {
+            background-color: var(--bg-linen-light);
+        }
+
+        /* Officer Card */
+        .officer-card {
+            background: linear-gradient(135deg, var(--bg-mint) 0%, #ffffff 100%);
+            border: 1px solid var(--border-organic);
+            border-radius: 16px;
+            padding: 24px;
+            margin: 24px 0;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .officer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .officer-item strong {
+            display: block;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 2px;
+        }
+
+        .officer-item span,
+        .officer-item a {
+            font-size: 0.95rem;
+            color: var(--brand-green);
+            font-weight: 600;
+        }
+
+        .officer-item a:hover {
+            color: var(--brand-coral);
+            text-decoration: underline;
+        }
+
+        /* Back to Top Floating Button */
+        .btn-back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--brand-green);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(1, 43, 48, 0.25);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition-smooth);
+            z-index: 99;
+        }
+
+        .btn-back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .btn-back-to-top:hover {
+            background: var(--brand-coral);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .policy-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .policy-sidebar {
+                position: static;
+                margin-bottom: 20px;
+            }
+
+            .toc-list {
+                max-height: 280px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .policy-hero {
+                padding: 100px 0 40px;
+            }
+
+            .policy-hero h1 {
+                font-size: 2rem;
+            }
+
+            .policy-section h2 {
+                font-size: 1.45rem;
+            }
+
+            .policy-table-wrapper {
+                margin: 16px -12px;
+                border-radius: 8px;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .nav-saas-container,
+            .policy-sidebar,
+            .footer-saas,
+            .btn-back-to-top,
+            .sidebar-action-box {
+                display: none !important;
+            }
+
+            .policy-hero {
+                padding: 20px 0 !important;
+                background: none !important;
+                border: none !important;
+            }
+
+            .policy-main-section {
+                padding: 0 !important;
+            }
+
+            .policy-grid {
+                display: block !important;
+            }
+
+            .policy-section {
+                page-break-inside: avoid;
+                border-bottom: 1px solid #ccc !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="epoq-light-theme">
+
+    <!-- ==========================================================================
+       Navigation Bar (Original Epoq Connect Floating Bar)
+       ========================================================================== -->
+    <nav class="nav-saas-container" id="navbar">
+        <a href="/projects/epoq-connect" class="logo-text" aria-label="Epoq Connect Home">
+            EPOQ <span>CONNECT</span><span class="logo-dot"></span>
+        </a>
+        <div class="nav-saas-links" id="nav-links">
+            <a href="/projects/epoq-connect#solutions">Solutions</a>
+            <a href="/projects/epoq-connect#experience">Unified Flow</a>
+            <a href="/projects/epoq-connect#compare">Why Connect</a>
+            <a href="/projects/epoq-connect#pricing">Pricing</a>
+            <a href="/projects/epoq-connect#testimonials">Reviews</a>
+            <a href="/projects/epoq-connect#contact">Contact</a>
+        </div>
+        <div class="nav-ctas">
+            <a href="/projects/epoq-connect#contact" class="nav-signin">Sign In</a>
+            <a href="/projects/epoq-connect#contact" class="btn-coral nav-btn-trial">Free Trial</a>
+            <button class="hamburger" id="hamburger-menu" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ==========================================================================
+       Hero Section
+       ========================================================================== -->
+    <header class="policy-hero">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       Main Policy Content & Sticky Navigation
+       ========================================================================== -->
+    <main class="policy-main-section">
+        <div class="container policy-grid">
+
+            <!-- Sticky Left Sidebar -->
+            <aside class="policy-sidebar" aria-label="Policy Table of Contents">
+                <div class="toc-title">
+                    <span>Table of Contents</span>
+                    <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 500;">11 Sections</span>
+                </div>
+
+                <div class="toc-filter-box">
+                    <span class="toc-filter-icon">🔍</span>
+                    <input type="text" id="toc-filter" placeholder="Search policy topics..." aria-label="Filter policy topics">
+                </div>
+
+                <ul class="toc-list" id="toc-list">
+                    <li><a href="#section-1" class="toc-link active">1. Overview & Identity</a></li>
+                    <li><a href="#section-2" class="toc-link">2. Controller vs. Processor Roles</a></li>
+                    <li><a href="#section-3" class="toc-link">3. Information We Collect</a></li>
+                    <li><a href="#section-4" class="toc-link">4. Purpose & Legal Basis</a></li>
+                    <li><a href="#section-5" class="toc-link">5. Data Isolation & Security Safeguards</a></li>
+                    <li><a href="#section-6" class="toc-link">6. Data Retention & Deletion</a></li>
+                    <li><a href="#section-7" class="toc-link">7. Customer & User Rights (DPDP/GDPR)</a></li>
+                    <li><a href="#section-8" class="toc-link">8. Cookies & Session Audits</a></li>
+                    <li><a href="#section-9" class="toc-link">9. Children's Privacy</a></li>
+                    <li><a href="#section-10" class="toc-link">10. Changes to this Policy</a></li>
+                    <li><a href="#section-11" class="toc-link">11. Grievance Redressal & Contact</a></li>
+                </ul>
+
+                <div class="sidebar-action-box">
+                    <button type="button" class="btn-policy-action" id="btn-print-policy">
+                        <span>🖨️</span> Print / Save Policy (PDF)
+                    </button>
+                    <a href="mailto:info@epoqzero.com" class="btn-policy-action">
+                        <span>✉️</span> Email Privacy Team
+                    </a>
+
+                    <div class="sidebar-support-card">
+                        <strong>Need a signed DPA?</strong>
+                        Enterprise organizations can request our standard Data Processing Addendum (DPA) by contacting
+                        info@epoqzero.com.
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Detailed Policy Article -->
+            <article class="policy-article" id="policy-content">
+
+                <!-- Section 1 -->
+                <section class="policy-section" id="section-1">
+                    <span class="policy-section-num">Section 01</span>
+                    <h2>Overview & Corporate Identity</h2>
+                    <p>
+                        Welcome to <strong>Epoq Connect</strong>, a customizable CRM and lead management
+                        software platform developed, hosted, and operated by <strong>Epoq Zero LLP</strong> ("Epoq Zero", "we", "us", or "our"),
+                        a limited liability partnership registered in Kerala, India (LLPIN / Registration details maintained under the
+                        Ministry of Corporate Affairs, India).
+                    </p>
+                    <p>
+                        Epoq Connect empowers modern businesses, sales teams, educational institutions, healthcare networks, and
+                        customer support organizations to organize inquiries, manage customer relationships, and coordinate team workflows
+                        within a structured workspace.
+                    </p>
+                    <p>
+                        We hold customer privacy, confidentiality, and institutional data sovereignty as fundamental pillars
+                        of our platform. This Privacy Policy details the exact nature of data handled when you visit
+                        our web properties, register for an Epoq Connect tenant, or interact with our software interfaces.
+                    </p>
+
+                    <div class="callout-box green">
+                        <h4>🔒 Our Core Privacy Pledge</h4>
+                        <p>
+                            Epoq Zero LLP <strong>does NOT sell, rent, broker, or monetize</strong> your contact lists, CRM records,
+                            or inquiry information to third-party advertising networks or data aggregators. Your data remains exclusively yours.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Section 2 -->
+                <section class="policy-section" id="section-2">
+                    <span class="policy-section-num">Section 02</span>
+                    <h2>Data Controller vs. Data Processor Roles</h2>
+                    <p>
+                        Under global data protection standards (including the Indian Digital Personal Data Protection Act, 2023 [DPDP],
+                        and the EU General Data Protection Regulation [GDPR]), rights and obligations depend on whether an entity is a
+                        <strong>Data Controller (or Data Fiduciary)</strong> or a <strong>Data Processor</strong>:
+                    </p>
+
+                    <div class="policy-table-wrapper">
+                        <table class="policy-table">
+                            <thead>
+                                <tr>
+                                    <th>Context</th>
+                                    <th>Role of Epoq Zero</th>
+                                    <th>Role of Client Organization (You)</th>
+                                    <th>Description of Responsibility</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Account Registration & Inquiries</strong></td>
+                                    <td>Data Controller / Fiduciary</td>
+                                    <td>Data Principal / Contact Person</td>
+                                    <td>We determine the means of processing your full name, organization name, work email address, and phone number to provision access and answer inquiries.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>CRM Workspace & Lead Records</strong></td>
+                                    <td>Data Processor</td>
+                                    <td>Data Controller / Fiduciary</td>
+                                    <td>Your organization decides which prospective leads, contacts, and notes to enter. We process this data strictly on your documented instructions.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Section 3 -->
+                <section class="policy-section" id="section-3">
+                    <span class="policy-section-num">Section 03</span>
+                    <h2>Information We Collect</h2>
+                    <p>
+                        We follow strict data minimization principles. Epoq Connect collects only four essential contact and organizational fields required to establish your account, coordinate demonstrations, and facilitate platform usage:
+                    </p>
+
+                    <div class="policy-table-wrapper">
+                        <table class="policy-table">
+                            <thead>
+                                <tr>
+                                    <th>Data Field</th>
+                                    <th>Category</th>
+                                    <th>Purpose of Collection</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Full Name</strong></td>
+                                    <td>Identity Information</td>
+                                    <td>To identify authorized users, account administrators, and team members.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Organization Name</strong></td>
+                                    <td>Business Information</td>
+                                    <td>To identify your company or institution and configure your dedicated CRM tenant workspace.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Email Address</strong></td>
+                                    <td>Contact Information</td>
+                                    <td>To send account verification credentials, critical system notifications, and direct support communications.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Phone Number</strong></td>
+                                    <td>Contact Information</td>
+                                    <td>To verify user identity, coordinate product walkthroughs, and provide direct technical assistance.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Section 4 -->
+                <section class="policy-section" id="section-4">
+                    <span class="policy-section-num">Section 04</span>
+                    <h2>Purpose & Legal Basis for Processing</h2>
+                    <p>
+                        We process personal data only when substantiated by valid legal grounds under applicable law:
+                    </p>
+
+                    <div class="policy-table-wrapper">
+                        <table class="policy-table">
+                            <thead>
+                                <tr>
+                                    <th>Processing Purpose</th>
+                                    <th>Data Types Involved</th>
+                                    <th>Legal Basis (DPDP / GDPR)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Provisioning CRM tenant accounts & configuring workspace settings</td>
+                                    <td>Name, organization name, email, phone number</td>
+                                    <td><strong>Performance of Contract</strong> (fulfilling user requests to use the platform)</td>
+                                </tr>
+                                <tr>
+                                    <td>Direct customer support, walkthrough scheduling, and technical inquiries</td>
+                                    <td>Name, email, phone number</td>
+                                    <td><strong>Legitimate Interests & Consent</strong> (providing requested assistance)</td>
+                                </tr>
+                                <tr>
+                                    <td>Preventing unauthorized access and maintaining infrastructure security</td>
+                                    <td>IP addresses, login audit logs</td>
+                                    <td><strong>Legitimate Interests</strong> (protecting infrastructure and tenant confidentiality)</td>
+                                </tr>
+                                <tr>
+                                    <td>Dispatching critical service updates, downtime notices, or security alerts</td>
+                                    <td>Admin email address and phone number</td>
+                                    <td><strong>Contractual Necessity & Safety</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Section 5 -->
+                <section class="policy-section" id="section-5">
+                    <span class="policy-section-num">Section 05</span>
+                    <h2>Data Isolation & Technical Security Safeguards</h2>
+                    <p>
+                        We enforce rigorous, multi-layered security protocols to safeguard all tenant information from accidental
+                        loss, unauthorized interception, or destructive cyber attacks.
+                    </p>
+
+                    <h3>1. Tenant Data Isolation</h3>
+                    <p>
+                        Epoq Connect enforces strict logical tenant segregation across all database schemas. Every query executed
+                        is scoped by unique tenant identification keys, preventing cross-organization data leakage.
+                    </p>
+
+                    <h3>2. Cryptographic Controls</h3>
+                    <ul>
+                        <li><strong>In-Transit Encryption:</strong> All HTTP traffic to Epoq Connect endpoints is forced over modern TLS 1.3 with strict HTTP Strict Transport Security (HSTS).</li>
+                        <li><strong>At-Rest Encryption:</strong> CRM databases and backup archives are encrypted using industry-standard AES-256 encryption.</li>
+                        <li><strong>Credential Protection:</strong> User passwords are encrypted using salted cryptographic hashing algorithms (such as Argon2id or bcrypt).</li>
+                    </ul>
+
+                    <h3>3. Access Management</h3>
+                    <p>
+                        CRM accounts support role-based permissions (RBAC) ensuring only authorized members within your organization can access, view, or manage your organization's records.
+                    </p>
+                </section>
+
+                <!-- Section 6 -->
+                <section class="policy-section" id="section-6">
+                    <span class="policy-section-num">Section 06</span>
+                    <h2>Data Retention & Deletion Schedules</h2>
+                    <p>
+                        We preserve data only for as long as necessary to fulfill the purposes set out in this Privacy Policy:
+                    </p>
+                    <ul>
+                        <li><strong>Active Account Period:</strong> Your organization name, user names, email addresses, and phone numbers remain retained while your organization actively maintains an account with Epoq Connect.</li>
+                        <li><strong>Account Inactivity / Termination:</strong> Following account closure or formal cancellation, your account data enters a dormant grace period of <strong>30 calendar days</strong>, during which your team may request a final export.</li>
+                        <li><strong>Permanent Deletion:</strong> After 30 days, your account records and tenant data are permanently deleted from live production databases. Backup archives are overwritten on a rolling cycle within a maximum of <strong>90 days</strong>.</li>
+                    </ul>
+                </section>
+
+                <!-- Section 7 -->
+                <section class="policy-section" id="section-7">
+                    <span class="policy-section-num">Section 07</span>
+                    <h2>Customer & User Rights (DPDP & GDPR Aligned)</h2>
+                    <p>
+                        In accordance with the Digital Personal Data Protection Act, 2023 (DPDP) and global data protection standards,
+                        you hold clear rights regarding your personal information:
+                    </p>
+                    <ul>
+                        <li><strong>Right to Access:</strong> You can request a summary of the personal data (name, organization name, email, phone number) associated with your account.</li>
+                        <li><strong>Right to Rectification:</strong> You can update or correct any inaccuracies in your contact details by contacting us at <a href="mailto:info@epoqzero.com">info@epoqzero.com</a>.</li>
+                        <li><strong>Right to Erasure:</strong> You may request full deletion of your contact records and tenant workspace.</li>
+                        <li><strong>Right to Grievance Redressal:</strong> You have the right to register concerns or complaints directly with our designated Grievance Officer.</li>
+                    </ul>
+                </section>
+
+                <!-- Section 8 -->
+                <section class="policy-section" id="section-8">
+                    <span class="policy-section-num">Section 08</span>
+                    <h2>Cookies & Session Audits</h2>
+                    <p>
+                        Epoq Connect utilizes functional session cookies strictly necessary for application operation:
+                    </p>
+                    <ul>
+                        <li><strong>Authentication & Session Cookies:</strong> Encrypted, HTTP-only session tokens used to maintain your logged-in state across browser sessions securely.</li>
+                        <li><strong>Security Tokens:</strong> Unique cryptographic tokens that prevent Cross-Site Request Forgery (CSRF).</li>
+                        <li><strong>Preferences Cookies:</strong> Retaining basic user interface preferences, such as theme settings.</li>
+                    </ul>
+                    <p>
+                        We do <strong>not</strong> install cross-site advertising tracking cookies or ad retargeting pixels within logged-in CRM agent interfaces.
+                    </p>
+                </section>
+
+                <!-- Section 9 -->
+                <section class="policy-section" id="section-9">
+                    <span class="policy-section-num">Section 09</span>
+                    <h2>Children's Privacy Protection</h2>
+                    <p>
+                        Epoq Connect is a B2B enterprise software application designed for professional organizations and commercial enterprises. It is not intended for use by individuals under the age of 18 ("Minors"). We do not knowingly collect personal information directly from children.
+                    </p>
+                </section>
+
+                <!-- Section 10 -->
+                <section class="policy-section" id="section-10">
+                    <span class="policy-section-num">Section 10</span>
+                    <h2>Amendments to this Privacy Policy</h2>
+                    <p>
+                        We may periodically revise this Privacy Policy to reflect enhancements in Epoq Connect capabilities or updates to statutory data protection requirements. When significant revisions occur, we will notify registered users via email or post an update notice on this page with an updated effective date.
+                    </p>
+                </section>
+
+                <!-- Section 11 -->
+                <section class="policy-section" id="section-11">
+                    <span class="policy-section-num">Section 11</span>
+                    <h2>Grievance Redressal & Contact Information</h2>
+                    <p>
+                        In compliance with the Information Technology Act, 2000, and the Digital Personal Data Protection Act, 2023,
+                        the name and contact details of the official Grievance Officer and Data Protection Contact are provided below:
+                    </p>
+
+                    <div class="officer-card">
+                        <h3 style="margin-top: 0; color: var(--brand-green);">Epoq Zero LLP — Data Protection & Grievance Cell</h3>
+                        <p style="margin-bottom: 0; font-size: 0.95rem;">
+                            For privacy inquiries, DPA requests, deletion notices, or grievance escalation, please reach out to:
+                        </p>
+
+                        <div class="officer-grid">
+                            <div class="officer-item">
+                                <strong>Designated Officer</strong>
+                                <span>Grievance & Privacy Officer</span>
+                            </div>
+                            <div class="officer-item">
+                                <strong>Direct Privacy Email</strong>
+                                <a href="mailto:info@epoqzero.com">info@epoqzero.com</a>
+                            </div>
+                            <div class="officer-item">
+                                <strong>Corporate Office Phone</strong>
+                                <a href="tel:+918606207307">(+91) 8606207307</a>
+                            </div>
+                            <div class="officer-item">
+                                <strong>Registered Office</strong>
+                                <span>Epoq Zero LLP, West Fort, Thrissur, Kerala, 680004, India</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 24px;">
+                        We acknowledge all written privacy inquiries within 48 business hours and endeavor to resolve all documented
+                        concerns within thirty (30) calendar days from the date of receipt.
+                    </p>
+                </section>
+
+            </article>
+        </div>
+    </main>
+
+    <!-- Floating Back to Top Button -->
+    <button type="button" class="btn-back-to-top" id="back-to-top" aria-label="Back to top">
+        ↑
+    </button>
+
+    <!-- ==========================================================================
+       Deep Forest Green Footer (Matches Epoq Connect Footer)
+       ========================================================================== -->
+    <footer class="footer-saas">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">EPOQ CONNECT<span class="logo-dot"
+                        style="display:inline-block; vertical-align:middle;"></span></div>
+                <p>Highly customizable conversational CRM designed to unify sales, support, and team queues. Powering
+                    customer trust and response speeds on time and under budget.</p>
+                <div style="font-weight: 700; color: #ffffff;">An Epoq Zero LLP proprietary product.</div>
+            </div>
+
+            <div class="footer-links-col">
+                <h4>Solutions</h4>
+                <ul>
+                    <li><a href="/projects/epoq-connect#solutions">Support Suite</a></li>
+                    <li><a href="/projects/epoq-connect#solutions">Sales Engine</a></li>
+                    <li><a href="/projects/epoq-connect#solutions">Conversational API</a></li>
+                    <li><a href="/projects/epoq-connect#solutions">Workload Analytics</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/education-crm-software">Education CRM Spec</a></li>
+                    <li><a href="/projects/epoq-connect#pricing">CRM Pricing plans</a></li>
+                    <li><a href="/projects/epoq-connect#testimonials">Customer reviews</a></li>
+                    <li><a href="/projects/epoq-connect#contact">Expert callbacks</a></li>
+                    <li><a href="/epoq-connect/privacy-policy" style="color: #ffffff; font-weight: 600;">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-col">
+                <h4>Industry Editions</h4>
+                <ul>
+                    <li><a href="/education-crm-software">Education CRM</a></li>
+                    <li><a href="/travel-crm-software">Travel CRM</a></li>
+                    <li><a href="/healthcare-crm-software">Healthcare CRM</a></li>
+                    <li><a href="/logistics-crm-software">Logistics CRM</a></li>
+                    <li><a href="/billing-crm-software">Billing CRM</a></li>
+                    <li><a href="/multimedia-crm-software">Multimedia CRM</a></li>
+                    <li><a href="/real-estate-crm-software">Real Estate CRM</a></li>
+                    <li><a href="/retail-crm-software">Retail CRM</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-col">
+                <h4>Headquarters</h4>
+                <p style="line-height: 1.6; color: rgba(255, 255, 255, 0.45);">
+                    Epoq Zero LLP,<br>
+                    West Fort, Thrissur,<br>
+                    Kerala, 680004, India
+                </p>
+                <div style="margin-top: 10px; font-weight: 600; color: #ffffff;">Tel: (+91) 8606207307</div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <div>&copy; 2026 Epoq Zero LLP. All rights reserved. Epoq Connect is an established cloud application brand.
+            </div>
+            <div class="footer-bottom-links">
+                <a href="/">Epoq Zero Home</a>
+                <a href="/projects/epoq-connect">Epoq Connect</a>
+                <a href="/#portfolio">Agency Portfolio</a>
+                <a href="/about">About Agency</a>
+                <a href="/#contact">Contact Agency</a>
+                <a href="/epoq-connect/privacy-policy" style="color: #ffffff; font-weight: 600;">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================================================
+       Interactive Controllers (Scrollspy, Filter, Hamburger, Print)
+       ========================================================================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Navigation Scroll Effect
+            const nav = document.getElementById('navbar');
+            const backToTop = document.getElementById('back-to-top');
+
+            window.addEventListener('scroll', () => {
+                const scrollY = window.scrollY;
+                if (nav) {
+                    if (scrollY > 30) {
+                        nav.classList.add('scrolled');
+                    } else {
+                        nav.classList.remove('scrolled');
+                    }
+                }
+
+                if (scrollY > 400) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // 2. Mobile Hamburger menu
+            const burger = document.getElementById('hamburger-menu');
+            const navLinks = document.getElementById('nav-links');
+            if (burger && navLinks) {
+                burger.addEventListener('click', () => {
+                    navLinks.classList.toggle('mobile-active');
+                    burger.classList.toggle('open');
+                });
+
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('mobile-active');
+                        burger.classList.remove('open');
+                    });
+                });
+            }
+
+            // 3. Table of Contents Scrollspy
+            const sections = document.querySelectorAll('.policy-section');
+            const tocLinks = document.querySelectorAll('.toc-link');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '-20% 0px -70% 0px',
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        tocLinks.forEach(link => {
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+                            } else {
+                                link.classList.remove('active');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(sec => observer.observe(sec));
+
+            // 4. Quick Topic Search / Filter
+            const searchInput = document.getElementById('toc-filter');
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    const query = e.target.value.toLowerCase().trim();
+                    tocLinks.forEach(link => {
+                        const text = link.textContent.toLowerCase();
+                        const li = link.parentElement;
+                        if (!query || text.includes(query)) {
+                            li.style.display = 'block';
+                        } else {
+                            li.style.display = 'none';
+                        }
+                    });
+                });
+            }
+
+            // 5. Print Policy Button
+            const printBtn = document.getElementById('btn-print-policy');
+            if (printBtn) {
+                printBtn.addEventListener('click', () => {
+                    window.print();
+                });
+            }
+        });
+    </script>
+    <script type="module" src="/theme.js"></script>
+</body>
+
+</html>
